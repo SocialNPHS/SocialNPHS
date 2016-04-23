@@ -26,3 +26,33 @@ Analyze the NPHS through data from social media
 - Social libraries
   - [tweepy](http://www.tweepy.org)
   - [python-instagram](https://github.com/facebookarchive/python-instagram) maybe, haven't looked into it.
+
+## Guidelines
+
+Some tentative guidelines for development:
+
+- Write mostly in Python
+- Project structure
+  - There should be a folder for each social network, keeping isolated structure between them. Each folder should contain:
+    - A script leveraging that social network's API which **exposes a common interface**. Basically, this code should allow for data from different social networks to be accessed in the same way. It should expose methods for returning the text of posts by NPHS students, but not go so deep as to implement sentiment analysis, which can be implemented just once at a higher level.
+    - JSON data about accounts belonging to NPHS students, possibly formatted like
+    ```json
+    {
+      "@1Defenestrator": {
+        "class": 2019,
+        "name": "Luke Taylor",
+        "gender": "M",
+      },
+      "@G4_Y5_3X": {
+        "class": 2017,
+        "name": "Moshe Katzin-Nystrom",
+        "gender": "M",
+      }
+    }
+    ```
+  - There should be a higher-level interface that uses the data from the previously described submodules. It should read post text, and ignore social network. In other words, all sources are created equal. This should implement:
+    - Sentiment analysis (is the post positive or negative?)
+    - Other text processing
+      - Identify the subject, if any, and compare against a database of teachers and other students
+    - An exposed Python interface for accessing processed data
+  - There should be a folder full of scripts that leverage the data from the higher-level interface. These should implemenet things like graphs and charts, which should be kept separate from the Python interface.
