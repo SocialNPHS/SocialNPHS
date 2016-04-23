@@ -5,4 +5,6 @@ social media accounts
 
 import sources.twitter
 
-print(sources.twitter.data)
+if __name__ == "__main__":
+    from pprint import pprint
+    pprint(sources.twitter.data)

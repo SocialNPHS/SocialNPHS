@@ -26,7 +26,7 @@ def process_data(data):
 def csv2json(inp, out):
     """ Read a CSV file, write a JSON file. Magic. """
     # --- Load the CSV file --- #
-    with open(inp, "rb") as f:
+    with open(inp, "rt", encoding="utf-8") as f:
         reader = csv.reader(f)
         rows = list(reader)
 
@@ -44,7 +44,7 @@ def csv2json(inp, out):
         for row in completerows
     }
     # --- Write JSON file --- #
-    with open(out, "wb") as f:
+    with open(out, "wt", encoding="utf-8") as f:
         f.write(json.dumps(outdict, indent=2, sort_keys=True))
 
 if __name__ == "__main__":
