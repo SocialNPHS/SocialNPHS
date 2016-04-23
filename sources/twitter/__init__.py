@@ -12,3 +12,7 @@ datapath = os.path.join(curdir, "users.json")
 
 with open(datapath) as f:
     data = json.loads(f.read())
+
+if __name__ == "__main__":
+    print(data)
+    print(len(data))

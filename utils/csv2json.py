@@ -7,6 +7,22 @@ def validate_data(data):
     return not any([not x for x in data])
 
 
+def process_data(data):
+    """ Make some modifications to enrich data for a student """
+    # Add full name as a value
+    data["fullname"] = " ".join([
+        data["first"],
+        data["last"]
+    ])
+    # Replace null aliases with Python None
+    if data["alias"] == "null":
+        data["alias"] = None
+    # Replace boolean protected values with Python bool
+    data["protected"] = False if data["protected"] == "FALSE" else True
+
+    return data
+
+
 def csv2json(inp, out):
     """ Read a CSV file, write a JSON file. Magic. """
     # --- Load the CSV file --- #
@@ -23,8 +39,8 @@ def csv2json(inp, out):
     # --- Make a dict --- #
     # Form a dict for output. Pairs the handle with a dict of all categories.
     outdict = {
-        row[categories.index("handle")]:  # The handle, paired with
-        {categories[i]: n for i, n in enumerate(row)}  # The dict w/ user info
+        row[categories.index("handle")]:
+        process_data({categories[i]: n for i, n in enumerate(row)})
         for row in completerows
     }
     # --- Write JSON file --- #
