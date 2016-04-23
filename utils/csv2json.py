@@ -1,3 +1,8 @@
+"""
+Script used to generate JSON databases from CSV data. Outputs JSON in a format
+like that found in sources/twitter/users.json
+"""
+
 import csv
 import json
 
@@ -20,6 +25,8 @@ def process_data(data):
     # Replace boolean protected values with Python bool
     data["protected"] = False if data["protected"] == "FALSE" else True
 
+    data["handle"] = data["handle"].lstrip("@")
+
     return data
 
 
@@ -39,7 +46,7 @@ def csv2json(inp, out):
     # --- Make a dict --- #
     # Form a dict for output. Pairs the handle with a dict of all categories.
     outdict = {
-        row[categories.index("handle")]:
+        row[categories.index("handle")].lstrip("@"):
         process_data({categories[i]: n for i, n in enumerate(row)})
         for row in completerows
     }
