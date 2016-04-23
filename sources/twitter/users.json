@@ -1,224 +1,587 @@
 {
-	"@1Defenestrator": {
-		"grade":2019,
-		 "name":"Luke Taylor",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@G4_Y5_3X": {
-		"grade":2017,
-		 "name":"Moshe Katzin-Nystrom",
-		 "alias":"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Pråppe",
-		 "sex":"M"
-	 },
-	"@bravoc9": {
-		"grade":2016,
-		 "name":"Chris Bravo",
-		 "alias":"bris chravo",
-		 "sex":"M"
-	 },
-	"@alliedefoe12": {
-		"grade":2016,
-		 "name":"Allie Defoe",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@_elijahmckee": {
-		"grade":2017,
-		 "name":"Elijah McKee",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@SkylerTheSav": {
-		"grade":2016,
-		 "name":"Skyler Miller",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@samninja627": {
-		"grade":2016,
-		 "name":"Sam Kaplan",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@tylerben44": {
-		"grade":2016,
-		 "name":"Tyler Benenati",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@batterup79": {
-		"grade":2017,
-		 "name":"Ethan Torres",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@pillowgib": {
-		"grade":2017,
-		 "name":"Riley Gibson",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@GreggyRenner": {
-		"grade":2017,
-		 "name":"Greg Renner",
-		 "alias":"GREG",
-		 "sex":"M"
-	 },
-	"@samdorf10": {
-		"grade":2017,
-		 "name":"Sam Nidorf",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@Fionaweinstein": {
-		"grade":2017,
-		 "name":"Fiona Weinstein",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@EveeGulick": {
-		"grade":2017,
-		 "name":"Evee Gulick",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@marissa_dq": {
-		"grade":2017,
-		 "name":"Marissa DeQuarto",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@_ashleycurtis_": {
-		"grade":2017,
-		 "name":"Ashley Curis",
-		 "alias":"Ashley Jordan",
-		 "sex":"F"
-	 },
-	"@SRWYoungs": {
-		"grade":2017,
-		 "name":"Skyler Youngs",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@DrCrEaMZ1CLE": {
-		"grade":2017,
-		 "name":"PJ Davis",
-		 "alias":"XxDrCrEaMZ1CLExX",
-		 "sex":"M"
-	 },
-	"@jmnielson9597": {
-		"grade":2017,
-		 "name":"Jacob Nielson",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@DolanKeely": {
-		"grade":2017,
-		 "name":"Keely Dolan",
-		 "alias":"keely",
-		 "sex":"F"
-	 },
-	"@JunoHenderson": {
-		"grade":2017,
-		 "name":"Juno Henderson",
-		 "alias":"june",
-		 "sex":"F"
-	 },
-	"@lexis_garcia13": {
-		"grade":2017,
-		 "name":"Alexis Garcia",
-		 "alias":"alexis",
-		 "sex":"F"
-	 },
-	"@ninjasauce12345": {
-		"grade":2017,
-		 "name":"Jade Horton",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@jamie_hulsey": {
-		"grade":2016,
-		 "name":"Jamie Hulsey",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@juli_drc": {
-		"grade":2017,
-		 "name":"Julie DeArce",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@DarrenTsai_": {
-		"grade":2016,
-		 "name":"Darren Tsai",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@_Illanna_": {
-		"grade":2017,
-		 "name":"Ilanna Morgan",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@AveryTowers": {
-		"grade":2017,
-		 "name":"Avery Towers",
-		 "alias":"Homie-sexual",
-		 "sex":"F"
-	 },
-	"@LorenzoCanadil1": {
-		"grade":2017,
-		 "name":"Lorenzo Canadilla",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@KiraMartin4": {
-		"grade":2017,
-		 "name":"Kira Martin",
-		 "alias":"Kira Fartin",
-		 "sex":"F"
-	 },
-	"@willa_butler": {
-		"grade":2017,
-		 "name":"Willa Butler",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@lomartinez8": {
-		"grade":2017,
-		 "name":"Lauren Martinez",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@LDT701": {
-		"grade":2017,
-		 "name":"Lauren Torres",
-		 "alias":null,
-		 "sex":"F"
-	 },
-	"@connor_koch98": {
-		"grade":2016,
-		 "name":"Connor Koch",
-		 "alias":null,
-		 "sex":"M"
-	 },
-	"@_Carmen_Chu_": {
-		"grade":2016,
-		 "name":"Carmen Chu",
-		 "alias":"carmen",
-		 "sex":"F"
-	 },
-	"@PrivateKoom": {
-		"grade":2017,
-		 "name":"Kumar Singh",
-		 "alias":"Kumar",
-		 "sex":"M"
-	 },
-	"@Danielle_Takacs": {
-		"grade":2017,
-		 "name":"Danielle Takacs",
-		 "alias":"Danielle",
-		 "sex":"F"
-	 }
+  "@1Defenestrator": {
+    "alias": "null", 
+    "first": "Luke", 
+    "grade": "2019", 
+    "handle": "@1Defenestrator", 
+    "last": "Taylor", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@AveryTowers": {
+    "alias": "Homie-sexual", 
+    "first": "Avery", 
+    "grade": "2017", 
+    "handle": "@AveryTowers", 
+    "last": "Towers", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@Danielle_Takacs": {
+    "alias": "Danielle", 
+    "first": "Danielle", 
+    "grade": "2017", 
+    "handle": "@Danielle_Takacs", 
+    "last": "Takacs", 
+    "protected": "TRUE", 
+    "sex": "F"
+  }, 
+  "@DarrenTsai_": {
+    "alias": "null", 
+    "first": "Darren", 
+    "grade": "2016", 
+    "handle": "@DarrenTsai_", 
+    "last": "Tsai", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@DolanKeely": {
+    "alias": "keely", 
+    "first": "Keely", 
+    "grade": "2017", 
+    "handle": "@DolanKeely", 
+    "last": "Dolan", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@DrCrEaMZ1CLE": {
+    "alias": "XxDrCrEaMZ1CLExX", 
+    "first": "PJ", 
+    "grade": "2017", 
+    "handle": "@DrCrEaMZ1CLE", 
+    "last": "Davis", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@Dylan_Winslow9": {
+    "alias": "null", 
+    "first": "Dylan", 
+    "grade": "2019", 
+    "handle": "@Dylan_Winslow9", 
+    "last": "Winslow", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@EveeGulick": {
+    "alias": "null", 
+    "first": "Evee", 
+    "grade": "2017", 
+    "handle": "@EveeGulick", 
+    "last": "Gulick", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@Fionaweinstein": {
+    "alias": "null", 
+    "first": "Fiona", 
+    "grade": "2017", 
+    "handle": "@Fionaweinstein", 
+    "last": "Weinstein", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@G4_Y5_3X": {
+    "alias": "(\uff89\u25d5\u30ee\u25d5)\uff89*:\uff65\uff9f\u2727 Pr\u00e5ppe", 
+    "first": "Moshe", 
+    "grade": "2017", 
+    "handle": "@G4_Y5_3X", 
+    "last": "Katzin-Nystrom", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@GreggyRenner": {
+    "alias": "GREG", 
+    "first": "Greg", 
+    "grade": "2017", 
+    "handle": "@GreggyRenner", 
+    "last": "Renner", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@Gwen_OMeara": {
+    "alias": "The Worst\u2122", 
+    "first": "Gwen", 
+    "grade": "2019", 
+    "handle": "@Gwen_OMeara", 
+    "last": "O'Meara", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@HaileyOsborne7": {
+    "alias": "Hailey", 
+    "first": "Hailey", 
+    "grade": "2019", 
+    "handle": "@HaileyOsborne7", 
+    "last": "Osborne", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@Jazzon14072": {
+    "alias": "Solf\u00e8ge Salad", 
+    "first": "Jason", 
+    "grade": "2016", 
+    "handle": "@Jazzon14072", 
+    "last": "Rober", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@JunoHenderson": {
+    "alias": "june", 
+    "first": "Juno", 
+    "grade": "2017", 
+    "handle": "@JunoHenderson", 
+    "last": "Henderson", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@KiraMartin4": {
+    "alias": "Kira Fartin", 
+    "first": "Kira", 
+    "grade": "2017", 
+    "handle": "@KiraMartin4", 
+    "last": "Martin", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@LDT701": {
+    "alias": "null", 
+    "first": "Lauren", 
+    "grade": "2017", 
+    "handle": "@LDT701", 
+    "last": "Torres", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@LorenzoCanadil1": {
+    "alias": "null", 
+    "first": "Lorenzo", 
+    "grade": "2017", 
+    "handle": "@LorenzoCanadil1", 
+    "last": "Canadilla", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@M_leitnerfgun": {
+    "alias": "null", 
+    "first": "Maddy", 
+    "grade": "2019", 
+    "handle": "@M_leitnerfgun", 
+    "last": "Leitner", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@MarcusFariello": {
+    "alias": "Marcus", 
+    "first": "Marcus", 
+    "grade": "2019", 
+    "handle": "@MarcusFariello", 
+    "last": "Fariello", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@MattKirsch24": {
+    "alias": "Matty K", 
+    "first": "Matt", 
+    "grade": "2019", 
+    "handle": "@MattKirsch24", 
+    "last": "Kirsch", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@PrivateKoom": {
+    "alias": "Kumar", 
+    "first": "Kumar", 
+    "grade": "2017", 
+    "handle": "@PrivateKoom", 
+    "last": "Singh", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@Rompstir": {
+    "alias": "null", 
+    "first": "Eli", 
+    "grade": "2018", 
+    "handle": "@Rompstir", 
+    "last": "Duncan-Gilmour", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@SRWYoungs": {
+    "alias": "null", 
+    "first": "Skyler", 
+    "grade": "2017", 
+    "handle": "@SRWYoungs", 
+    "last": "Youngs", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@SkylerTheSav": {
+    "alias": "null", 
+    "first": "Skyler", 
+    "grade": "2016", 
+    "handle": "@SkylerTheSav", 
+    "last": "Miller", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@THE_samliebman": {
+    "alias": "null", 
+    "first": "Sam", 
+    "grade": "2019", 
+    "handle": "@THE_samliebman", 
+    "last": "Liebman", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@TadeuszQuinn": {
+    "alias": "Tadeusz Quinn", 
+    "first": "Tadeusz", 
+    "grade": "2019", 
+    "handle": "@TadeuszQuinn", 
+    "last": "Trezwik-Quinn", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@_Carmen_Chu_": {
+    "alias": "carmen", 
+    "first": "Carmen", 
+    "grade": "2016", 
+    "handle": "@_Carmen_Chu_", 
+    "last": "Chu", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@_Ilanna_": {
+    "alias": "null", 
+    "first": "Llanna", 
+    "grade": "2017", 
+    "handle": "@_Ilanna_", 
+    "last": "Morgan", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@_ashleycurtis_": {
+    "alias": "Ashley Jordan", 
+    "first": "Ashley", 
+    "grade": "2017", 
+    "handle": "@_ashleycurtis_", 
+    "last": "Curis", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@_elijahmckee": {
+    "alias": "null", 
+    "first": "Elijah", 
+    "grade": "2017", 
+    "handle": "@_elijahmckee", 
+    "last": "McKee", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@alishatamarch": {
+    "alias": "null", 
+    "first": "Alisha", 
+    "grade": "2016", 
+    "handle": "@alishatamarch", 
+    "last": "Tamarchenko", 
+    "protected": "TRUE", 
+    "sex": "F"
+  }, 
+  "@alliedefoe12": {
+    "alias": "null", 
+    "first": "Allie", 
+    "grade": "2016", 
+    "handle": "@alliedefoe12", 
+    "last": "Defoe", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@baelessnae": {
+    "alias": "null", 
+    "first": "Renae", 
+    "grade": "2019", 
+    "handle": "@baelessnae", 
+    "last": "Scoppa", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@batterup79": {
+    "alias": "null", 
+    "first": "Ethan", 
+    "grade": "2017", 
+    "handle": "@batterup79", 
+    "last": "Torres", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@bravoc9": {
+    "alias": "bris chravo", 
+    "first": "Chris", 
+    "grade": "2016", 
+    "handle": "@bravoc9", 
+    "last": "Bravo", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@caitlynnnn10": {
+    "alias": "null", 
+    "first": "Cait", 
+    "grade": "2016", 
+    "handle": "@caitlynnnn10", 
+    "last": "Callahan", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@chad_cataniaa": {
+    "alias": "null", 
+    "first": "Chad", 
+    "grade": "2018", 
+    "handle": "@chad_cataniaa", 
+    "last": "Catania", 
+    "protected": "TRUE", 
+    "sex": "M"
+  }, 
+  "@connor_koch98": {
+    "alias": "null", 
+    "first": "Connor", 
+    "grade": "2016", 
+    "handle": "@connor_koch98", 
+    "last": "Koch", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@dinoschroer": {
+    "alias": "null", 
+    "first": "Caroline", 
+    "grade": "2016", 
+    "handle": "@dinoschroer", 
+    "last": "Schroer", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@jamie_hulsey": {
+    "alias": "null", 
+    "first": "Jamie", 
+    "grade": "2016", 
+    "handle": "@jamie_hulsey", 
+    "last": "Hulsey", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@jcanelos16": {
+    "alias": "null", 
+    "first": "Joe", 
+    "grade": "2018", 
+    "handle": "@jcanelos16", 
+    "last": "Canelos", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@jmnielson9597": {
+    "alias": "null", 
+    "first": "Jacob", 
+    "grade": "2017", 
+    "handle": "@jmnielson9597", 
+    "last": "Nielson", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@juli_drc": {
+    "alias": "null", 
+    "first": "Julie", 
+    "grade": "2017", 
+    "handle": "@juli_drc", 
+    "last": "DeArce", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@justacrazybear": {
+    "alias": "null", 
+    "first": "Ian", 
+    "grade": "2019", 
+    "handle": "@justacrazybear", 
+    "last": "Harding", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@keira_lyn_": {
+    "alias": "Keira Lyn", 
+    "first": "Keira", 
+    "grade": "2019", 
+    "handle": "@keira_lyn_", 
+    "last": "Coulard-Smith", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@kelly_vinett": {
+    "alias": "null", 
+    "first": "Kelly", 
+    "grade": "2016", 
+    "handle": "@kelly_vinett", 
+    "last": "Vinette", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@kevin_mullady": {
+    "alias": "null", 
+    "first": "Kevin", 
+    "grade": "2019", 
+    "handle": "@kevin_mullady", 
+    "last": "Mullady", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@lexis_garcia13": {
+    "alias": "alexis", 
+    "first": "Alexis", 
+    "grade": "2017", 
+    "handle": "@lexis_garcia13", 
+    "last": "Garcia", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@lianna_mailey": {
+    "alias": "null", 
+    "first": "Lianna", 
+    "grade": "2019", 
+    "handle": "@lianna_mailey", 
+    "last": "Maley", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@lj_maney": {
+    "alias": "null", 
+    "first": "Lea", 
+    "grade": "2017", 
+    "handle": "@lj_maney", 
+    "last": "Maney", 
+    "protected": "TRUE", 
+    "sex": "F"
+  }, 
+  "@lomartinez8": {
+    "alias": "null", 
+    "first": "Lauren", 
+    "grade": "2017", 
+    "handle": "@lomartinez8", 
+    "last": "Martinez", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@luke_sturgis": {
+    "alias": "null", 
+    "first": "Luke", 
+    "grade": "2016", 
+    "handle": "@luke_sturgis", 
+    "last": "Sturgis", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@mac_nn_cheese": {
+    "alias": "Maya the B\u266a", 
+    "first": "Maya", 
+    "grade": "2019", 
+    "handle": "@mac_nn_cheese", 
+    "last": "Greenfield", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@marissa_dq": {
+    "alias": "null", 
+    "first": "Marissa", 
+    "grade": "2017", 
+    "handle": "@marissa_dq", 
+    "last": "DeQuarto", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@nickrusso70": {
+    "alias": "Nicholas Russo", 
+    "first": "Nick", 
+    "grade": "2019", 
+    "handle": "@nickrusso70", 
+    "last": "Russo", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@ninjasauce12345": {
+    "alias": "null", 
+    "first": "Jade", 
+    "grade": "2017", 
+    "handle": "@ninjasauce12345", 
+    "last": "Horton", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@pillowgib": {
+    "alias": "null", 
+    "first": "Riley", 
+    "grade": "2017", 
+    "handle": "@pillowgib", 
+    "last": "Gibson", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@samdorf10": {
+    "alias": "null", 
+    "first": "Sam", 
+    "grade": "2017", 
+    "handle": "@samdorf10", 
+    "last": "Nidorf", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@samkniff": {
+    "alias": "Sam Kniff", 
+    "first": "Sam", 
+    "grade": "2019", 
+    "handle": "@samkniff", 
+    "last": "Kniffen", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@samninja627": {
+    "alias": "null", 
+    "first": "Sam", 
+    "grade": "2016", 
+    "handle": "@samninja627", 
+    "last": "Kaplan", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }, 
+  "@skyonfire13": {
+    "alias": "null", 
+    "first": "Elijah", 
+    "grade": "2019", 
+    "handle": "@skyonfire13", 
+    "last": "Tamarchenko", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@tanmanjohnson": {
+    "alias": "null", 
+    "first": "Tanner", 
+    "grade": "2019", 
+    "handle": "@tanmanjohnson", 
+    "last": "Johnson", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@tylerben44": {
+    "alias": "null", 
+    "first": "Tyler", 
+    "grade": "2016", 
+    "handle": "@tylerben44", 
+    "last": "Benenati", 
+    "protected": "FALSE", 
+    "sex": "M"
+  }, 
+  "@willa_butler": {
+    "alias": "null", 
+    "first": "Willa", 
+    "grade": "2017", 
+    "handle": "@willa_butler", 
+    "last": "Butler", 
+    "protected": "FALSE", 
+    "sex": "F"
+  }
 }

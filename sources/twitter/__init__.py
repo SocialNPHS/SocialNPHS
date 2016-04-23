@@ -6,7 +6,7 @@ import json
 import os
 
 # Directory in which this file is located
-curdir = os.path.split(__file__)[0]
+curdir = os.path.dirname(__file__)
 # Path to JSON data file
 datapath = os.path.join(curdir, "users.json")
 
