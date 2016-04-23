@@ -399,6 +399,16 @@
     "protected": false,
     "sex": "F"
   },
+  "isaacthomas11": {
+    "alias": "iCandy",
+    "first": "Isaac",
+    "fullname": "Isaac Thomas",
+    "grade": "2017",
+    "handle": "isaacthomas11",
+    "last": "Thomas",
+    "protected": false,
+    "sex": "M"
+  },
   "jamie_hulsey": {
     "alias": null,
     "first": "Jamie",
@@ -546,6 +556,16 @@
     "grade": "2017",
     "handle": "marissa_dq",
     "last": "DeQuarto",
+    "protected": false,
+    "sex": "F"
+  },
+  "mickayy1125": {
+    "alias": null,
+    "first": "Mikal",
+    "fullname": "Mikal Kalus",
+    "grade": "2017",
+    "handle": "mickayy1125",
+    "last": "Kalus",
     "protected": false,
     "sex": "F"
   },

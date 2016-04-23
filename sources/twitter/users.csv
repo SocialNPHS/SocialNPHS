@@ -50,6 +50,8 @@ handle,grade,First,Last,alias,sex,protected
 @PrivateKoom,2017,Kumar,Singh,Kumar,M,FALSE
 @Danielle_Takacs,2017,Danielle,Takacs,Danielle,F,TRUE
 @lj_maney,2017,Lea,Maney,null,F,TRUE
+@mickayy1125,2017,Mikal,Kalus,null,F,FALSE
+@isaacthomas11,2017,Isaac,Thomas,iCandy,M,FALSE
 @bravoc9,2016,Chris,Bravo,bris chravo,M,FALSE
 @alliedefoe12,2016,Allie,Defoe,null,F,FALSE
 @SkylerTheSav,2016,Skyler,Miller,null,M,FALSE
@@ -65,8 +67,6 @@ handle,grade,First,Last,alias,sex,protected
 @alishatamarch,2016,Alisha,Tamarchenko,null,F,TRUE
 @kelly_vinett,2016,Kelly,Vinette,null,F,FALSE
 @dinoschroer,2016,Caroline,Schroer,null,F,FALSE
-@erinmetzger15,,Erin,Metzger,null,F,FALSE
-@mickayy1125,,Mikal,Kalus,null,F,FALSE
 @beckkynicole,,Becky,,becky,F,FALSE
 @meghan_gisele,,Meghan,Fisher,null,F,FALSE
-@isaacthomas11,,Isaac,Thomas,iCandy,M,FALSE
+@erinmetzger15,,Erin,Metzger,null,F,FALSE
