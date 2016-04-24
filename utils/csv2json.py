@@ -25,7 +25,7 @@ def process_data(data):
     ])
     # Replace null aliases with Python None
     if data["alias"] == "null":
-        data["alias"] = None
+        data["alias"] = data["fullname"]
     # Replace boolean protected values with Python bool
     data["protected"] = False if data["protected"] == "FALSE" else True
 
