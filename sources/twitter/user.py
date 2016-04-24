@@ -3,9 +3,11 @@ Base class for a twitter user
 """
 
 import json
+
 import tweepy
 
-# Retrieves Twitter API tokens & keys
+
+# Retrieves Twitter API tokens & keys from cached JSON store
 with open('token.json') as f:
     t = json.load(f)
     CONSUMER_KEY = t['CONSUMER_KEY']
@@ -24,6 +26,7 @@ with open('users.json') as f:
 class NPUser(object):
     def __init__(self, screen_name):
         self.screen_name = screen_name
+        self.user_info = Students[self.screen_name]
         self.User = api.get_user(self.screen_name)
 
     @property
@@ -43,9 +46,18 @@ class NPUser(object):
         return {
             '2016': 'Senior', '2017': 'Junior',
             '2018': 'Sophomore', '2019': 'Freshman'
-            }.get(grade, None)
+        }.get(grade, None)
 
-    @property
-    def sex(self):
-        """ What do you think it returns? """
-        return Students[self.screen_name]['sex']
+    def __getattr__(self, key):
+        """ Magic method for automatically making user dict info accessible as
+        an attribute"""
+        if key not in self.user_info:
+            raise AttributeError(self.__class__.__name__ +
+                                 "instance has no attribute '" + key + "'")
+        else:
+            return self.user_info[key]
+
+if __name__ == "__main__":
+    a = NPUser("1Defenestrator")
+    print(a.sex)
+    print(a.grade)
