@@ -17,6 +17,9 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 api = tweepy.API(auth)
 
+with open('users.json') as f:
+    Students = json.load(f)
+
 
 class NPUser(object):
     def __init__(self, screen_name):
@@ -32,3 +35,17 @@ class NPUser(object):
     def followers(self):
         """ List of users following this user """
         return self.User.followers()
+
+    @property
+    def grade(self):
+        """ Returns colloquial grade name of user """
+        grade = Students[self.screen_name]['grade']
+        return {
+            '2016': 'Senior', '2017': 'Junior',
+            '2018': 'Sophomore', '2019': 'Freshman'
+            }.get(grade, None)
+
+    @property
+    def sex(self):
+        """ What do you think it returns? """
+        return Students[self.screen_name]['sex']
