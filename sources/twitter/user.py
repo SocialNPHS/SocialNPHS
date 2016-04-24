@@ -2,6 +2,7 @@
 Base class for a twitter user
 """
 
+import datetime
 import json
 
 import tweepy
@@ -29,8 +30,19 @@ def _get_api():
 
 
 def get_users_dict():
+    """ Loads the JSON file full of user info """
     with open('users.json') as f:
         return json.load(f)
+
+
+def get_graduating_class():
+    """Get the year of the next graduating class. Assumes once July starts,
+    everyone moves up a grade, since people graduate in late June."""
+    now = datetime.date.today()
+    if now.month < 7:  # It's before summer (july)
+        return now.year
+    else:
+        return now.year + 1
 
 
 # -------- GLOBALS -------- #
@@ -61,10 +73,11 @@ class NPUser(object):
     @property
     def grade(self):
         """ Returns colloquial grade name of user """
-        grade = self.user_info['grade']
+        grade = int(self.user_info['grade'])
+        grad = get_graduating_class()
         return {
-            '2016': 'Senior', '2017': 'Junior',
-            '2018': 'Sophomore', '2019': 'Freshman'
+            grad: 'Senior', grad + 1: 'Junior',
+            grad + 2: 'Sophomore', grad + 3: 'Freshman'
         }.get(grade, None)
 
     def __getattr__(self, key):
@@ -83,3 +96,9 @@ if __name__ == "__main__":
     a = NPUser("1Defenestrator")
     print(a.sex)
     print(a.grade)
+
+    b = NPUser("G4_Y5_3X")
+    print(b.sex)
+    print(b.grade)
+
+    print(get_graduating_class())
