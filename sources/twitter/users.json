@@ -19,16 +19,6 @@
     "protected": false,
     "sex": "F"
   },
-  "Danielle_Takacs": {
-    "alias": "Danielle",
-    "first": "Danielle",
-    "fullname": "Danielle Takacs",
-    "grade": "2017",
-    "handle": "Danielle_Takacs",
-    "last": "Takacs",
-    "protected": true,
-    "sex": "F"
-  },
   "DarrenTsai_": {
     "alias": null,
     "first": "Darren",
@@ -309,16 +299,6 @@
     "protected": false,
     "sex": "M"
   },
-  "alishatamarch": {
-    "alias": null,
-    "first": "Alisha",
-    "fullname": "Alisha Tamarchenko",
-    "grade": "2016",
-    "handle": "alishatamarch",
-    "last": "Tamarchenko",
-    "protected": true,
-    "sex": "F"
-  },
   "alliedefoe12": {
     "alias": null,
     "first": "Allie",
@@ -368,16 +348,6 @@
     "last": "Callahan",
     "protected": false,
     "sex": "F"
-  },
-  "chad_cataniaa": {
-    "alias": null,
-    "first": "Chad",
-    "fullname": "Chad Catania",
-    "grade": "2018",
-    "handle": "chad_cataniaa",
-    "last": "Catania",
-    "protected": true,
-    "sex": "M"
   },
   "connor_koch98": {
     "alias": null,
@@ -507,16 +477,6 @@
     "handle": "lianna_mailey",
     "last": "Maley",
     "protected": false,
-    "sex": "F"
-  },
-  "lj_maney": {
-    "alias": null,
-    "first": "Lea",
-    "fullname": "Lea Maney",
-    "grade": "2017",
-    "handle": "lj_maney",
-    "last": "Maney",
-    "protected": true,
     "sex": "F"
   },
   "lomartinez8": {

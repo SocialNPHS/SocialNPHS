@@ -7,8 +7,12 @@ import csv
 import json
 
 
-def validate_data(data):
-    """ Returns False if there are any empty values in the list """
+def validate_data(data, categories):
+    """ Returns False if the list should not be included in the database,
+    either because it is an incomplete entry or because the account is
+    protected. """
+    if data[categories.index("protected")] != "FALSE":
+        return False
     return not any([not x for x in data])
 
 
@@ -41,7 +45,7 @@ def csv2json(inp, out):
     # Header, describes categories
     categories = [c.lower() for c in rows[0]]
     # Entries for whom we have a complete set of data. Exclude partial entries
-    completerows = [r for r in rows[1:] if validate_data(r)]
+    completerows = [r for r in rows[1:] if validate_data(r, categories)]
 
     # --- Make a dict --- #
     # Form a dict for output. Pairs the handle with a dict of all categories.
