@@ -6,18 +6,10 @@ import datetime
 import json
 import os
 
-from SocialNPHS.sources.twitter import auth
+from SocialNPHS.sources.twitter.auth import api
 from SocialNPHS.utils.database import Database
 
-api = auth.api
-
 # -------- HELPER METHODS -------- #
-
-
-def get_users_dict():
-    """ Loads the JSON file full of user info """
-    with open(os.path.join(localdir, 'users.json')) as f:
-        return json.load(f)
 
 
 def get_graduating_class():
@@ -29,12 +21,11 @@ def get_graduating_class():
     else:
         return now.year + 1
 
-
 # -------- GLOBALS -------- #
 
 localdir = os.path.dirname(os.path.abspath(__file__))
-students = get_users_dict()
-
+dbpath = os.path.join(localdir, "users.json")
+students = Database(dbpath)
 
 # -------- MAIN CLASSES -------- #
 

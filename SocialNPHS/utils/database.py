@@ -1,5 +1,5 @@
 """
-Easy way to access and write JSON databases
+Easy way to read and write JSON databases
 """
 
 import json

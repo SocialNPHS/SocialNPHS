@@ -31,7 +31,7 @@ Analyze the New Paltz High School through data from social media
 		- [x] List of students from New Paltz
 		- [ ] Account discovery
 		- [ ] Fetching data from accounts
-- [ ] Language analysis
+- [ ] Natural language analysis
 	- [ ] Sentiment analysis
 	- [ ] Identify subject of posts
 - [ ] Data analysis and visualization
