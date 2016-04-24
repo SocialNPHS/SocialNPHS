@@ -1,6 +1,10 @@
 """ Get authenticated tweepy API object """
-import tweepy
 import json
+import os
+
+import tweepy
+
+localdir = os.path.dirname(os.path.abspath(__file__))
 
 
 def _get_secret_stuffs():
@@ -9,7 +13,7 @@ def _get_secret_stuffs():
                "CONSUMER_SECRET",
                "ACCESS_TOKEN",
                "ACCESS_SECRET"]
-    with open("token.json") as f:
+    with open(os.path.join(localdir, "token.json")) as f:
         t = json.load(f)
         return [t[s] for s in secrets]
 

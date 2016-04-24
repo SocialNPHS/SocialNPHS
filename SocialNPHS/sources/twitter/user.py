@@ -4,15 +4,19 @@ Base class for a twitter user
 
 import datetime
 import json
+import os
 
-from auth import api
+from SocialNPHS.sources.twitter import auth
+from SocialNPHS.utils.database import Database
+
+api = auth.api
 
 # -------- HELPER METHODS -------- #
 
 
 def get_users_dict():
     """ Loads the JSON file full of user info """
-    with open('users.json') as f:
+    with open(os.path.join(localdir, 'users.json')) as f:
         return json.load(f)
 
 
@@ -28,6 +32,7 @@ def get_graduating_class():
 
 # -------- GLOBALS -------- #
 
+localdir = os.path.dirname(os.path.abspath(__file__))
 students = get_users_dict()
 
 

@@ -59,4 +59,5 @@ def csv2json(inp, out):
         f.write(json.dumps(outdict, indent=2, sort_keys=True))
 
 if __name__ == "__main__":
-    csv2json("sources/twitter/users.csv", "sources/twitter/users.json")
+    csv2json("SocialNPHS/sources/twitter/users.csv",
+             "SocialNPHS/sources/twitter/users.json")
