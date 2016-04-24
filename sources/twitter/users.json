@@ -529,6 +529,16 @@
     "protected": false,
     "sex": "F"
   },
+  "malloryfariello": {
+    "alias": "Mal\u2661\u3897",
+    "first": "Mallory",
+    "fullname": "Mallory Fariello",
+    "grade": "2017",
+    "handle": "malloryfariello",
+    "last": "Fariello",
+    "protected": false,
+    "sex": "F"
+  },
   "marissa_dq": {
     "alias": "Marissa DeQuarto",
     "first": "Marissa",
@@ -546,6 +556,16 @@
     "grade": "2017",
     "handle": "mickayy1125",
     "last": "Kalus",
+    "protected": false,
+    "sex": "F"
+  },
+  "nadiem619": {
+    "alias": "Nadine Masour",
+    "first": "Nadine",
+    "fullname": "Nadine Mansour",
+    "grade": "2017",
+    "handle": "nadiem619",
+    "last": "Mansour",
     "protected": false,
     "sex": "F"
   },
@@ -648,25 +668,5 @@
     "last": "Butler",
     "protected": false,
     "sex": "F"
-  },
-  "nadiem619": {
-      "alias": "Nadine Masour",
-      "first": "Nadine",
-      "fullname": "Nadine Mansour",
-      "grade": "2017",
-      "handle": "nadiem619",
-      "last": "Mansour",
-      "protected": false,
-      "sex": "F"
-  },
-  "malloryfariello": {
-      "alias": "Mal\u2661\u3897",
-      "first": "Mallory",
-      "fullname": "Mallory Fariello",
-      "grade": "2017",
-      "handle": "malloryfariello",
-      "last": "Fariello",
-      "protected": false,
-      "sex": "F"
   }
 }

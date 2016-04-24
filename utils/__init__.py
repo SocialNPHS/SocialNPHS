@@ -1,3 +1,3 @@
 """
-Miscellaneous utilities used during development
+Internally-used utilities
 """
