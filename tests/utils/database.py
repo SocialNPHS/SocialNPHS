@@ -6,10 +6,8 @@ sys.path.insert(0, ".")
 
 from SocialNPHS.utils.database import Database
 
-localdir = os.path.dirname(os.path.abspath(__file__))
-
 # -- Test changing the database, then restore -- #
-path = os.path.join(localdir, "testdb.json")
+path = os.path.abspath("tests/utils/testdb.json")
 # Create magical database class
 db = Database(path)
 # Store old value
@@ -22,5 +20,3 @@ stored = Database(path)["cats"]
 assert stored == "database corruption wreaks havoc upon this earth"
 # Restore
 db["cats"] = old
-
-print("All tests passed")

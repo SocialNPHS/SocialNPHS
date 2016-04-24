@@ -6,5 +6,3 @@ sys.path.insert(0, ".")
 from SocialNPHS.sources.twitter import user
 a = user.NPUser("1Defenestrator")
 assert a.sex == "M"
-
-print("All tests passed!")
