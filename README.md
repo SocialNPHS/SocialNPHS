@@ -20,6 +20,28 @@ Analyze the New Paltz High School through data from social media
 	- Sentiment analysis of posts about students
 		- For the list of student names, determine proportion of positive/negative posts that mention a student
 
+## Checklist
+
+- [ ] Data retrieval
+	- [ ] Twitter
+		- [x] List of students from New Paltz
+		- [ ] Account discovery
+		- [ ] Fetching data from accounts
+	- [ ] Instagram
+		- [x] List of students from New Paltz
+		- [ ] Account discovery
+		- [ ] Fetching data from accounts
+- [ ] Language analysis
+	- [ ] Sentiment analysis
+	- [ ] Identify subject of posts
+- [ ] Data analysis and visualization
+	- [ ] Teachers
+		- [ ] Calculate proportion of positive/negative/neutral posts about teachers
+		- [ ] Calculate frequency of posts about teachers
+	- [ ] Students
+		- [ ] Calculate proportion of positive/negative/neutral posts about students
+		- [ ] Calculate frequency of posts about students
+
 ## Libraries
 
 - Use [nltk](http://www.nltk.org) for text processing
