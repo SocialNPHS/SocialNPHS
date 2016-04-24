@@ -64,17 +64,3 @@ class NPUser(object):
                                  "instance has no attribute '" + key + "'")
         else:
             return self.user_info[key]
-
-
-# -------- TESTS -------- #
-
-if __name__ == "__main__":
-    a = NPUser("1Defenestrator")
-    print(a.sex)
-    print(a.grade)
-
-    b = NPUser("G4_Y5_3X")
-    print(b.sex)
-    print(b.grade)
-
-    print(get_graduating_class())
