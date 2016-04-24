@@ -369,6 +369,16 @@
     "protected": false,
     "sex": "F"
   },
+  "emily_stettner": {
+    "alias": null,
+    "first": "Emily",
+    "fullname": "Emily Stettner",
+    "grade": "2019",
+    "handle": "emily_stettner",
+    "last": "Stettner",
+    "protected": false,
+    "sex": "F"
+  },
   "isaacthomas11": {
     "alias": "iCandy",
     "first": "Isaac",
@@ -379,12 +389,12 @@
     "protected": false,
     "sex": "M"
   },
-  "jamie_hulsey": {
+  "jam_hulsey": {
     "alias": null,
     "first": "Jamie",
     "fullname": "Jamie Hulsey",
     "grade": "2016",
-    "handle": "jamie_hulsey",
+    "handle": "jam_hulsey",
     "last": "Hulsey",
     "protected": false,
     "sex": "F"
@@ -448,6 +458,16 @@
     "last": "Vinette",
     "protected": false,
     "sex": "F"
+  },
+  "kendiaz222": {
+    "alias": null,
+    "first": "Ken",
+    "fullname": "Ken Diaz",
+    "grade": "2016",
+    "handle": "kendiaz222",
+    "last": "Diaz",
+    "protected": false,
+    "sex": "M"
   },
   "kevin_mullady": {
     "alias": null,
