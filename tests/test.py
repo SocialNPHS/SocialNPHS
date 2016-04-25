@@ -10,9 +10,12 @@ def listTests(folder):
     return [os.path.join(folder, i) for i in os.listdir(folder)
             if i.endswith(".py")]
 
-testDirs = ["utils", "sources"]  # Subfolders in which tests are kept
-absTestDirs = [os.path.join(localdir, td) for td in testDirs]
-tests = sum([listTests(td) for td in absTestDirs], [])
+# All files in the same directory as this file
+subfiles = [os.path.join(localdir, fi) for fi in os.listdir(localdir)]
+# All directories inside the directory this file is in
+testDirs = [d for d in subfiles if os.path.isdir(d)]
+# Find tests in identified test directories, and flatten
+tests = sum([listTests(td) for td in testDirs], [])
 
 for test in tests:
     with open(test) as f:
