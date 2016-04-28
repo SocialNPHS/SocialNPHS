@@ -55,7 +55,12 @@ class NPUser(object):
             grad: 'Senior', grad + 1: 'Junior',
             grad + 2: 'Sophomore', grad + 3: 'Freshman'
         }.get(grade, None)
-
+    
+    def has_graduated(self):
+        """ Has the user graduated? """
+        return int(self.user_info['grade']) < get_graduating_class()
+        
+        
     def __getattr__(self, key):
         """ Magic method for automatically making user dict info accessible as
         an attribute"""
