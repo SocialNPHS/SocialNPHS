@@ -6,8 +6,13 @@ sys.path.insert(0, ".")
 
 from SocialNPHS.utils.database import Database
 
-# -- Test changing the database, then restore -- #
+
+# Path to test JSON file
 path = os.path.abspath("tests/utils/testdb.json")
+
+
+# -- Test changing the database, then restore -- #
+
 # Create magical database class
 db = Database(path)
 # Store old value
@@ -20,3 +25,11 @@ stored = Database(path)["cats"]
 assert stored == "database corruption wreaks havoc upon this earth"
 # Restore
 db["cats"] = old
+
+
+# -- Test adding and deleting an item from the database, as well as db.get -- #
+db = Database(path)
+db["penguins"] = "woah it's a penguin"
+assert Database(path)["penguins"] == "woah it's a penguin"
+db.pop("penguins")
+assert Database(path).get("penguins", "nope") == "nope"
