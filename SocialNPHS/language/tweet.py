@@ -20,7 +20,11 @@ def get_tweet_tags(tweet):
     # replace handles with real names
     for n in range(0, len(tokens)):
         if tokens[n].startswith('@'):
-            # TODO: account for case if mentioned user is not in users.json
-            usr = user.NPUser(tokens[n][1:])
-            tokens[n] = usr.fullname
+            handle = tokens[n][1:]
+            if handle in user.students:
+                usr = user.NPUser(tokens[n][1:])
+                tokens[n] = usr.fullname
+            else:
+                # TODO: replace with twitter alias
+                pass
     return nltk.pos_tag(tokens)
