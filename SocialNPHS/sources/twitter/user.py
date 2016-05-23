@@ -33,7 +33,7 @@ students = Database(dbpath)
 class NPUser(object):
     def __init__(self, screen_name):
         self.screen_name = screen_name
-        self.user_info = students[self.screen_name]
+        self.user_info = students.get(self.screen_name)
         self.User = api.get_user(self.screen_name)
 
     @property
