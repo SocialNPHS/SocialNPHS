@@ -33,7 +33,12 @@ students = Database(dbpath)
 class NPUser(object):
     def __init__(self, screen_name):
         self.screen_name = screen_name
-        self.user_info = students.get(self.screen_name)
+        if self.screen_name not in students:
+            # TODO: add the user to the database in this case
+            raise ValueError("{} doesn't appear to be in the database".format(
+                self.screen_name
+            ))
+        self.user_info = students[self.screen_name]
         self.User = api.get_user(self.screen_name)
 
     @property
