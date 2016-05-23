@@ -18,9 +18,13 @@ def get_tweet_tags(tweet):
         if tok.startswith('@'):
             handle = tok.strip("@")
             if handle in user.students:
+                # If we have a database entry for the mentioned user, we can
+                # easily substitute a full name.
                 usr = user.NPUser(handle)
                 tokens[n] = usr.fullname
             else:
-                # TODO: replace with twitter alias
-                pass
+                # If there is no database entry, we use the user's alias. While
+                # this is the full name in many cases, it is often not reliable
+                usr = api.get_user(handle)
+                tokens[n] = usr.name
     return nltk.pos_tag(tokens)
