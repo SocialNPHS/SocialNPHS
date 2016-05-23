@@ -2,15 +2,11 @@
 Given a tweet, tokenize it and shit.
 """
 
-import json
-
-import tweepy
 import nltk
 from nltk.tokenize import TweetTokenizer
 
 from SocialNPHS.sources.twitter.auth import api
 from SocialNPHS.sources.twitter import user
-from SocialNPHS.utils.database import Database
 
 
 def get_tweet_tags(tweet):
