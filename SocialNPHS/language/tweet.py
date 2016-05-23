@@ -14,11 +14,11 @@ def get_tweet_tags(tweet):
     tknzr = TweetTokenizer()
     tokens = tknzr.tokenize(tweet.text)
     # replace handles with real names
-    for n in range(0, len(tokens)):
-        if tokens[n].startswith('@'):
-            handle = tokens[n][1:]
+    for n, tok in enumerate(tokens):
+        if tok.startswith('@'):
+            handle = tok.strip("@")
             if handle in user.students:
-                usr = user.NPUser(tokens[n][1:])
+                usr = user.NPUser(handle)
                 tokens[n] = usr.fullname
             else:
                 # TODO: replace with twitter alias
