@@ -17,8 +17,7 @@ path = os.path.abspath("tests/utils/testdb.json")
 db = Database(path)
 # Store old value
 old = db["cats"]
-# Change value. Note that I use *my* twitter for testing, except when something
-# might go wrong, in which case I use Moshe's.
+# Change value.
 db["cats"] = "database corruption wreaks havoc upon this earth"
 # Test that the file was changed by making a new instance and reading
 stored = Database(path)["cats"]
