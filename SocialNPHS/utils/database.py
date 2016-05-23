@@ -33,3 +33,6 @@ class Database(object):
 
     def __len__(self):
         return len(self.jsonstore)
+
+    def __contains__(self, key):
+        return key in self.jsonstore

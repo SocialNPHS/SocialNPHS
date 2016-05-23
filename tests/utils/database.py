@@ -26,9 +26,12 @@ assert stored == "database corruption wreaks havoc upon this earth"
 db["cats"] = old
 
 
-# -- Test adding and deleting an item from the database, as well as db.get -- #
+# -- Test adding and deleting an item from the database, as well as db.get and
+#    the semantic "in" -- #
 db = Database(path)
 db["penguins"] = "woah it's a penguin"
-assert Database(path)["penguins"] == "woah it's a penguin"
+assert Database(path)["penguins"] == "woah it's a penguin"  # Make a new one
+assert "penguins" in Database(path)
 db.pop("penguins")
 assert Database(path).get("penguins", "nope") == "nope"
+assert "penguins" not in Database(path)
