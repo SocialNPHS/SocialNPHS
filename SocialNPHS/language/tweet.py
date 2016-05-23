@@ -12,7 +12,7 @@ from SocialNPHS.sources.twitter import user
 def get_tweet_tags(tweet):
     """ Break up a tweet into individual word parts """
     tknzr = TweetTokenizer()
-    tokens = tknzr.tokenize(tweet.text)
+    tokens = tknzr.tokenize(tweet)
     # replace handles with real names
     for n, tok in enumerate(tokens):
         if tok.startswith('@'):
