@@ -1,14 +1,17 @@
 """ Run all tests. """
 import glob
-import os
+import unittest
 
-localdir = os.path.dirname(os.path.abspath(__file__))
+from os import path
 
+localdir = path.dirname(path.abspath(__file__))
 
-tests = glob.glob(os.path.join(localdir, "*/*.py"))
+# Absolute path to each testing script
+tests = glob.glob(path.join(localdir, "tests/*.py"))
 
-for test in tests:
-    with open(test) as f:
-        code = compile(f.read(), test, 'exec')
-        exec(code)
-    print("Tests in {} passed!".format(os.path.split(test)[1]))
+# Names of modules to be imported
+testNames = ["tests." + path.splitext(path.split(t)[1])[0] for t in tests]
+
+suites = [unittest.defaultTestLoader.loadTestsFromName(t) for t in testNames]
+fullsuite = unittest.TestSuite(suites)
+unittest.TextTestRunner().run(fullsuite)
