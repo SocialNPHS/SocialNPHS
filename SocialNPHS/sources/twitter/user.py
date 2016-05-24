@@ -3,7 +3,6 @@ Base class for a twitter user
 """
 
 import datetime
-import json
 import os
 
 from SocialNPHS.sources.twitter.auth import api
