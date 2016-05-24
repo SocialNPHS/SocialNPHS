@@ -29,26 +29,42 @@ students = Database(dbpath)
 # -------- MAIN CLASSES -------- #
 
 
-class NPUser(object):
-    def __init__(self, screen_name):
+class User(object):
+    """ Base class for a twitter user """
+    def __init__(self, screen_name, should_retrieve=False):
+        self.retrieved = False  # Has the API call been made to retrieve info?
         self.screen_name = screen_name
+
+    @property
+    def tweepy(self):
+        """ Return the tweepy object for this user """
+        # Store the tweepy object if it has not yet been stored
+        if not self.retrieved:
+            self._tweepy = api.get_user(self.screen_name)
+            self.retrieved = True
+
+        return self._tweepy
+
+    @property
+    def following(self):
+        """ All the users this user follows """
+        return self.tweepy.friends()
+
+    @property
+    def followers(self):
+        """ All the users who follow this user """
+        return self.tweepy.followers()
+
+
+class NPUser(User):
+    def __init__(self, screen_name):
+        super(NPUser, self).__init__(screen_name)
         if self.screen_name not in students:
             # TODO: add the user to the database in this case
             raise ValueError("{} doesn't appear to be in the database".format(
                 self.screen_name
             ))
         self.user_info = students[self.screen_name]
-        self.User = api.get_user(self.screen_name)
-
-    @property
-    def following(self):
-        """ List of users that this user follows """
-        return self.User.friends()
-
-    @property
-    def followers(self):
-        """ List of users following this user """
-        return self.User.followers()
 
     @property
     def grade(self):
