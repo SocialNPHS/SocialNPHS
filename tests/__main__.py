@@ -1,4 +1,6 @@
-""" Run all tests. """
+"""
+Run all tests
+"""
 import glob
 import unittest
 

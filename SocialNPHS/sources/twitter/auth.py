@@ -1,4 +1,7 @@
-""" Get authenticated tweepy API object """
+"""
+Get authenticated tweepy API object
+"""
+
 import json
 import os
 
