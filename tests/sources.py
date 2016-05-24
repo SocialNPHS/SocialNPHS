@@ -14,8 +14,14 @@ base = path.abspath(path.join(path.dirname(path.abspath(__file__)), ".."))
 sys.path.insert(0, base)
 
 from SocialNPHS.sources.twitter import user
+from SocialNPHS.sources.twitter import tweets
+
 
 class testTwitter(unittest.TestCase):
+    """ Test everything in SocialNPHS.sources.twitter """
+
+    # user.py
+
     def test_basics(self):
         luke = user.NPUser("1Defenestrator")
         self.assertIsInstance(luke.followers, list)
@@ -39,3 +45,10 @@ class testTwitter(unittest.TestCase):
         moshe.user_info["grade"] = "2000"  # In the future
         self.assertTrue(moshe.has_graduated)
         moshe.user_info["grade"] = "2017"  # Reset
+
+    # tweets.py
+
+    def test_list(self):
+        t = tweets.get_nphs_tweets()
+        self.assertIsInstance(t, list)
+        self.assertIsInstance(t[0], str)
