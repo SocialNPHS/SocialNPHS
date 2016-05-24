@@ -1,6 +1,6 @@
 """ The actual tests live here """
 
-import analyze
-import language
-import sources
-import utils
+from tests import analyze
+from tests import language
+from tests import sources
+from tests import utils
