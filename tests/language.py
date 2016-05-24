@@ -18,7 +18,12 @@ from SocialNPHS.sources.twitter import user
 
 
 class testLanguage(unittest.TestCase):
-    def test_tweet(self):
+    def test_tweet_tagging(self):
+        # Test that tagging works in its most basic form
         moshe = user.NPUser("G4_Y5_3X")
         tags = tweet.get_tweet_tags(moshe.User.status.text)
         self.assertIsInstance(tags, list)
+        # Test that names are replaced and recognized as proper nouns
+        tags = tweet.get_tweet_tags("@1Defenestrator is really awesome!")
+        self.assertEqual(tags[0][0], "Luke Taylor")
+        self.assertEqual(tags[0][1], "NNP")
