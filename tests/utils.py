@@ -10,14 +10,14 @@ from os import path
 
 # PATH MAGIC
 # Project root
-base = path.abspath(path.join(path.dirname(path.abspath(__file__)), "../.."))
+base = path.abspath(path.join(path.dirname(path.abspath(__file__)), ".."))
 sys.path.insert(0, base)
 
 from SocialNPHS.utils.database import Database
 
 
 # Path to JSON file
-dbpath = path.join(base, "tests/tests/testassets/testdb.json")
+dbpath = path.join(base, "tests/testassets/testdb.json")
 
 
 class testTwitter(unittest.TestCase):

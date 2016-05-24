@@ -10,7 +10,7 @@ from os import path
 
 # PATH MAGIC
 # Project root
-base = path.abspath(path.join(path.dirname(path.abspath(__file__)), "../.."))
+base = path.abspath(path.join(path.dirname(path.abspath(__file__)), ".."))
 sys.path.insert(0, base)
 
 from SocialNPHS.sources.twitter import user
