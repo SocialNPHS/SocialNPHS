@@ -25,14 +25,14 @@ Analyze the New Paltz High School through data from social media
 - [ ] Data retrieval
 	- [ ] Twitter
 		- [x] List of students from New Paltz
-		- [ ] Account discovery
+		- [x] Account discovery
 		- [ ] Fetching data from accounts
 	- [ ] Instagram
 		- [x] List of students from New Paltz
 		- [ ] Account discovery
 		- [ ] Fetching data from accounts
 - [ ] Natural language analysis
-	- [ ] Sentiment analysis
+	- [x] Sentiment analysis
 	- [ ] Identify subject of posts
 - [ ] Data analysis and visualization
 	- [ ] Teachers
@@ -59,20 +59,28 @@ Some tentative guidelines for development:
     - A script leveraging that social network's API which **exposes a common interface**. Basically, this code should allow for data from different social networks to be accessed in the same way. It should expose methods for returning the text of posts by NPHS students, but not go so deep as to implement sentiment analysis, which can be implemented just once at a higher level.
     - JSON data about accounts belonging to NPHS students, formatted like
     ```json
-	{
-		"@1Defenestrator": {
-			"grade":2019,
-			"name":"Luke Taylor",
-			"alias":null,
-			"sex":"M"
-		},
-		"@G4_Y5_3X": {
-			"grade":2017,
-			"name":"Moshe Katzin-Nystrom",
-			"alias":"(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Pråppe",
-			"sex":"M"
-		},
-	}
+    {
+        "1Defenestrator": {
+            "alias": "Luke Taylor",
+            "first": "Luke",
+            "fullname": "Luke Taylor",
+            "grade": "2019",
+            "handle": "1Defenestrator",
+            "last": "Taylor",
+            "protected": false,
+            "sex": "M"
+        },
+        "G4_Y5_3X": {
+            "alias": "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Pråppe",
+            "first": "Moshe",
+            "fullname": "Moshe Katzin-Nystrom",
+            "grade": "2017",
+            "handle": "G4_Y5_3X",
+            "last": "Katzin-Nystrom",
+            "protected": false,
+            "sex": "M"
+        },
+    }
     ```
   - There should be a higher-level interface that uses the data from the previously described submodules. It should read post text, and ignore social network. In other words, all sources are created equal. This should implement:
     - Sentiment analysis (is the post positive or negative?)
