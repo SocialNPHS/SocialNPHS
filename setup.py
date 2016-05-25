@@ -15,6 +15,6 @@ setup(
     url="http://luke.deentaylor.com/",
     install_requires=[
         "tweepy",
-        "python-instagram"
+        "shapely"
     ]
 )

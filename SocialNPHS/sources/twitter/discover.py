@@ -4,6 +4,7 @@ Identify other NPHS students based on their connections and geolocated tweets
 
 import random
 
+import shapely
 import tweepy
 
 from SocialNPHS.sources.twitter.auth import api
@@ -43,15 +44,15 @@ def discover_by_geolocation(origin, num_users=20):
                 # ...or the hard way:
                 # check if the tweet's location's 4 coords are contained in
                 # new paltz's general area
-                # TODO: proabably a more mathematical way to figure this out,
-                # such as using a `Polygon` object or something
                 else:
-                    for coord in t.place.bounding_box.coordinates[0][0]:
-                        if coord[0] < -74.295 or coord[0] > -72.037 or
-                        coord[1] < 41.655 or coord[1] > 41.811:
-                            continue  # coord is outside of np area :'c
+                    # general new paltz area - final / constant
+                    NP_AREA = shapely.geometry.Polygon([(-74.295, 41.655),
+                                                        (-74.295, 41.811),
+                                                        (-72.037, 41.811),
+                                                        (-72.037, 41.655)])
+                    area = shapely.geometry.Polygon(t.place.bounding_box.coordinates)
+                    if area.intersects(NP_AREA):
                         np_users.append(u.screen_name)
-                        break
     return np_users
 
 def discover_by_association(origin, num_users=20, num_np_followers=5):
