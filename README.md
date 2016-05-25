@@ -27,7 +27,7 @@ Analyze the New Paltz High School through data from social media
 		- [x] List of students from New Paltz
 		- [x] Account discovery
 		- [ ] Fetching data from accounts
-	- [ ] Instagram
+	- [ ] ~~Instagram~~ (not planned)
 		- [x] List of students from New Paltz
 		- [ ] Account discovery
 		- [ ] Fetching data from accounts
