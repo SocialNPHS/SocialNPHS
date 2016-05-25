@@ -73,3 +73,19 @@ def person_connotation(tweet, name):
         for v in overall:
             overall[v] = round(overall[v] / mentions, 3)
     return overall
+
+
+def person_multi_connotation(tweets, name):
+    """ Analyze many tweets (a list of tweets in fact) about a person """
+    mentioned = 0
+    overall = {'compound': 0, 'neg': 0, 'neu': 0, 'pos': 0}
+    for t in tweets:
+        if name in t:
+            score = person_connotation(t, name)
+            for i, z in enumerate(score):
+                overall[z] += score[z]
+            mentioned += 1
+    if mentioned != 0:
+        for v in overall:
+            overall[v] = round(overall[v] / mentioned, 3)
+    return overall
