@@ -68,7 +68,7 @@ def discover_by_association(origin, num_users=20, num_np_followers=5):
         # go through this user's followers' followers to see how popular
         # they are with np students
         followers = u.followers
-        if len(followers) > 2000:
+        if u.followers_count > 2000:
             # nobody from new paltz would be super famous so we can skip them
             continue
         found_np_followers = 0
