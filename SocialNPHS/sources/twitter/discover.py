@@ -8,7 +8,7 @@ import shapely
 import tweepy
 
 from SocialNPHS.sources.twitter.auth import api
-from SocialNPHS.sources.twitter import *
+from SocialNPHS.sources.twitter import user
 
 
 def discover_by_location(origin, num_users=20):
@@ -50,10 +50,13 @@ def discover_by_geolocation(origin, num_users=20):
                                                         (-74.295, 41.811),
                                                         (-72.037, 41.811),
                                                         (-72.037, 41.655)])
-                    area = shapely.geometry.Polygon(t.place.bounding_box.coordinates)
+                    area = shapely.geometry.Polygon(
+                        t.place.bounding_box.coordinates
+                    )
                     if area.intersects(NP_AREA):
                         np_users.append(u.screen_name)
     return np_users
+
 
 def discover_by_association(origin, num_users=20, num_np_followers=5):
     """
@@ -69,17 +72,11 @@ def discover_by_association(origin, num_users=20, num_np_followers=5):
             # nobody from new paltz would be super famous so we can skip them
             continue
         found_np_followers = 0
-        for p in u.followers:
+        for follower in followers:
+            if follower.screen_name in user.students:
+                found_np_followers += 1
+            # if u has enough followers from New Paltz you win a new a car
             if found_np_followers >= num_np_followers:
-                # if `u` has enough np followers you win a new a car
                 np_users.append(u.screen_name)
                 break
-            try:
-                # check if this follower is an npuser
-                _p = user.NPUser(p.screen_name)
-            except ValueError:
-                # well they aren't in the db so try the next dude
-                continue
-            else:
-                found_np_followers += 1
     return np_users
