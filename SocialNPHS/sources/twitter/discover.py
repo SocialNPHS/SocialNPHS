@@ -5,7 +5,6 @@ Identify other NPHS students based on their connections and geolocated tweets
 import random
 
 import shapely
-import tweepy
 
 from SocialNPHS.sources.twitter.auth import api
 from SocialNPHS.sources.twitter import user
