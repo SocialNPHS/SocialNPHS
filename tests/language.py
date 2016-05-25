@@ -17,7 +17,7 @@ from SocialNPHS.language import tweet
 from SocialNPHS.sources.twitter import user
 
 
-class testLanguage(unittest.TestCase):
+class testTweetLanguage(unittest.TestCase):
     def setUp(self):
         self.sentence = ("@1Defenestrator is really awesome! Although, "
                          "@G4_Y5_3X is cooler.")
@@ -32,7 +32,7 @@ class testLanguage(unittest.TestCase):
         self.assertEqual(tags[0][0], "Luke Taylor")
         self.assertEqual(tags[0][1], "NNP")
 
-    def test_tweet_analysis(self):
+    def test_tweet_sentiment(self):
         # Test that basic sentiment analysis works
         self.assertEqual(
             tweet.tweet_connotation(self.sentence)['compound'],

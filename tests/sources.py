@@ -17,10 +17,10 @@ from SocialNPHS.sources.twitter import user
 from SocialNPHS.sources.twitter import tweets
 
 
-class testTwitter(unittest.TestCase):
-    """ Test everything in SocialNPHS.sources.twitter """
+# TWITTER TESTS
 
-    # user.py
+class testUser(unittest.TestCase):
+    """ Test SocialNPHS.sources.twitter.user """
 
     def test_basics(self):
         luke = user.NPUser("1Defenestrator")
@@ -46,9 +46,15 @@ class testTwitter(unittest.TestCase):
         self.assertTrue(moshe.has_graduated)
         moshe.user_info["grade"] = "2017"  # Reset
 
-    # tweets.py
 
+class testTweets(unittest.TestCase):
+    """ Test SocialNPHS.sources.twitter.tweets """
     def test_list(self):
         t = tweets.get_nphs_tweets()
         self.assertIsInstance(t, list)
         self.assertIsInstance(t[0], str)
+
+
+class testDiscovery(unittest.TestCase):
+    """ Test SocialNPHS.sources.twitter.discover """
+    pass
