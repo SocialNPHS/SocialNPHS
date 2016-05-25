@@ -45,7 +45,7 @@ def tweet_connotation(tweet):
             overall[z] += scores[z]
     # average it all together for the tweet as a whole
     for v in overall:
-        overall[v] = round(overall[v]/len(twtcontent), 3)
+        overall[v] = round(overall[v] / len(twtcontent), 3)
     return overall
 
 
@@ -71,5 +71,5 @@ def person_connotation(tweet, name):
     # averaging all sentences' scores. don't wanna divide by zero now do we
     if mentions != 0:
         for v in overall:
-            overall[v] = round(overall[v]/mentions, 3)
+            overall[v] = round(overall[v] / mentions, 3)
     return overall
