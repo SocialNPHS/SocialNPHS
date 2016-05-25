@@ -18,7 +18,7 @@ from SocialNPHS.sources.twitter import user
 
 
 class testLanguage(unittest.TestCase):
-    test = "@1Defenestrator is really awesome! Although, @G4_Y5_3X is cooler."
+    words = "@1Defenestrator is really awesome! Although, @G4_Y5_3X is cooler."
 
     def test_tweet_tagging(self):
         # Test that tagging works in its most basic form
@@ -26,12 +26,17 @@ class testLanguage(unittest.TestCase):
         tags = tweet.get_tweet_tags(moshe.tweepy.status.text)
         self.assertIsInstance(tags, list)
         # Test that names are replaced and recognized as proper nouns
-        tags = tweet.get_tweet_tags(test)
+        tags = tweet.get_tweet_tags(self.words)
         self.assertEqual(tags[0][0], "Luke Taylor")
         self.assertEqual(tags[0][1], "NNP")
 
     def test_tweet_analysis(self):
-        # Test that basic sentiment analysis works (current values hardcoded)
-        self.assertEqual(tweet.tweet_connotation(test)['compound'], 0.345)
-        self.assertEqual(tweet.person_connotation(test, 'Luke Taylor')['neu'],
-                         0.461)  # pep8 line limit bite my shiny python ass
+        # Test that basic sentiment analysis works
+        self.assertEqual(
+            tweet.tweet_connotation(self.words)['compound'],
+            0.345
+        )
+        self.assertEqual(
+            tweet.person_connotation(self.words, 'Luke Taylor')['neu'],
+            0.461
+        )
