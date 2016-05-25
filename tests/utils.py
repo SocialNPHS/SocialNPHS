@@ -3,15 +3,11 @@ Unit tests for the portion of this project which provides utilities to be used
 by other parts of this project.
 """
 
-import sys
+import os
 import unittest
 
-from os import path
-
-# PATH MAGIC
-# Project root
-base = path.abspath(path.join(path.dirname(path.abspath(__file__)), ".."))
-sys.path.insert(0, base)
+# Magically manipulate sys.path
+from testassets import pathmagic
 
 from SocialNPHS.utils.database import Database
 
@@ -20,7 +16,8 @@ class testDatabase(unittest.TestCase):
     """ Test the magical JSON database class """
     def setUp(self):
         # Path to JSON file
-        self.dbpath = path.join(base, "tests/testassets/testdb.json")
+        self.dbpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                   "testassets/testdb.json")
 
     def test_basic_usage(self):
         db = Database(self.dbpath)

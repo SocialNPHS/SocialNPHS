@@ -3,15 +3,10 @@ Unit tests for the portion of this project which processes raw text using
 natural language processing techniques.
 """
 
-import sys
 import unittest
 
-from os import path
-
-# PATH MAGIC
-# Project root
-base = path.abspath(path.join(path.dirname(path.abspath(__file__)), ".."))
-sys.path.insert(0, base)
+# Magically manipulate sys.path
+from testassets import pathmagic
 
 from SocialNPHS.language import tweet
 from SocialNPHS.sources.twitter import user
