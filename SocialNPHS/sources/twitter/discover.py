@@ -19,7 +19,7 @@ def discover_by_location(origin, num_users=20):
     users = random.sample(origin.following + origin.followers, num_users)
     np_users = []
     for u in users:
-        if u.location is not None and 'New Paltz' in u.location:
+        if u.location is not None and 'new paltz' in u.location.lower():
             np_users.append(u.screen_name)
     return np_users
 
