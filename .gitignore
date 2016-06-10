@@ -15,3 +15,6 @@ __pycache__/
 
 # Twitter API tokens
 token.json
+
+# `coverage` module
+.coverage
