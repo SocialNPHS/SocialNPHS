@@ -2,7 +2,7 @@ language: python
 python:
   - "3.5"
 install:
-  - pip install livejson tweepy shapely
+  - pip install nltk livejson tweepy shapely
   - python -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
 script:
   - python tests
