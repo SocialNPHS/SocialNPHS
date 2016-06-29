@@ -3,7 +3,7 @@ machine:
     version: 3.5.1
 dependencies:
   cache_directories:
-    - .pyenv/versions/3.5.1
+    - ../.pyenv/versions/3.5.1
   post: # This is after installing other dependencies
     - python3 -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
 test:
