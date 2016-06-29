@@ -1,7 +1,9 @@
 # SocialNPHS
 [![CircleCI](https://circleci.com/gh/controversial/SocialNPHS.svg?style=shield&circle-token=2ec99fa472c49fafdd1bbe21491bdd8eaa949669)](https://circleci.com/gh/controversial/SocialNPHS)
 
-Analyze New Paltz High School through data from social media
+Analyze New Paltz High School through data from social media.
+
+SocialNPHS operates by reading tweets off a twitter list of NPHS students. It analyzes the tweet using a variety of natural language processing techniques. It also compares these users against [a database](https://github.com/controversial/SocialNPHS/blob/master/SocialNPHS/sources/twitter/users.json) of users to gain additional context, such as which grade the user belongs to. Using the content of the tweet in combination with this additional information, SocialNPHS creates charts and graphs to summarize the state of New Paltz High School as a whole.
 
 ## Quickstart
 **Installing**:
