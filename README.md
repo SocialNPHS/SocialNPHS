@@ -1,4 +1,6 @@
 # SocialNPHS
+[![CircleCI](https://circleci.com/gh/controversial/SocialNPHS.svg?style=shield&circle-token=2ec99fa472c49fafdd1bbe21491bdd8eaa949669)](https://circleci.com/gh/controversial/SocialNPHS)
+
 Analyze the New Paltz High School through data from social media
 
 ## Project outline
