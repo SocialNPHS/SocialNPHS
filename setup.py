@@ -16,7 +16,8 @@ setup(
     install_requires=[
         "livejson",
         "tweepy",
-        "shapely"
+        "shapely",
+        "livejson"
     ],
     test_requires=[
         "coverage"
