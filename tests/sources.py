@@ -53,3 +53,11 @@ class testTweets(unittest.TestCase):
 class testDiscovery(unittest.TestCase):
     """ Test SocialNPHS.sources.twitter.discover """
     pass
+
+
+# INSTAGRAM TESTS
+
+class TestNotImplemented(unittest.TestCase):
+    def test_error(self):
+        with self.assertRaises(NotImplementedError):
+            import SocialNPHS.sources.instagram
