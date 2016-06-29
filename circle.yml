@@ -3,7 +3,7 @@ machine:
     version: 3.5.1
 dependencies:
   post: # This is after installing other dependencies
-    python3 -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
+    - python3 -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
 test:
   override:
     - python tests # Nosetests tries to be smart and does not succeed
