@@ -1,9 +1,10 @@
 machine:
+  pre:
+    - wget https://s3.amazonaws.com/circle-downloads/circle-pyenv-python-3.5.1_1.0_amd64.deb
+    - sudo dpkg -i circle-pyenv-python-3.5.1_1.0_amd64.deb
   python:
     version: 3.5.1
 dependencies:
-  cache_directories:
-    - ../.pyenv/versions/3.5.1
   post: # This is after installing other dependencies
     - python3 -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
 test:
