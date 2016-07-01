@@ -11,8 +11,8 @@ from SocialNPHS.data.twitter_users import students
 
 
 def get_graduating_class():
-    """Get the year of the next graduating class. Assumes once July starts,
-    everyone moves up a grade, since people graduate in late June."""
+    """ Get the year of the next graduating class. Assumes once July starts,
+    everyone moves up a grade, since graduation is in late June. """
     now = datetime.date.today()
     return now.year if now.month < 7 else now.year + 1
 

@@ -14,7 +14,7 @@ from SocialNPHS.sources.twitter import tweets
 
 # TWITTER TESTS
 
-class testUser(unittest.TestCase):
+class TestUser(unittest.TestCase):
     """ Test SocialNPHS.sources.twitter.user """
 
     def test_basics(self):
@@ -40,6 +40,10 @@ class testUser(unittest.TestCase):
         moshe.user_info["grade"] = "2000"  # In the future
         self.assertTrue(moshe.has_graduated)
         moshe.user_info["grade"] = "2017"  # Reset
+
+    def test_exceptions(self):
+        with self.assertRaises(ValueError):
+            user.NPUser("this_is_too_long_to_be_a_twitter_handle")
 
 
 class testTweets(unittest.TestCase):
