@@ -3,6 +3,7 @@ Run all tests
 """
 import glob
 from os import path
+import sys
 import unittest
 
 import coverage
@@ -24,6 +25,7 @@ fullsuite = unittest.TestSuite(suites)
 
 unittest.TextTestRunner().run(fullsuite)
 
-print("\n")
 cov.stop()
-cov.report()
+if "--report-coverage" in sys.argv:
+    print("\n")
+    cov.report()

@@ -12,4 +12,4 @@ dependencies:
     - python3 -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
 test:
   override:
-    - python3 tests # Nosetests tries to be smart and does not succeed
+    - python3 tests --report-coverage # Nosetests tries to be smart and does not succeed
