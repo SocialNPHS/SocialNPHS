@@ -32,8 +32,7 @@ if "--report-coverage" in sys.argv:
     inside_circle = "CIRCLE_ARTIFACTS" in os.environ
     # We are inside CircleCI
     if inside_circle:
-        export = os.path.join(os.environ["CIRCLE_ARTIFACTS"], "coverage.txt")
-        with open(export, "w") as f:
-            cov.report(show_missing=True, file=f)
+        out = os.path.join(os.environ["CIRCLE_ARTIFACTS"], "coverage-report")
+        cov.html_report(directory=out)
     else:
         cov.report(show_missing=True)
