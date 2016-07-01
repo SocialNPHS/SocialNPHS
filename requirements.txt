@@ -1,5 +1,5 @@
 nltk
 tweepy
-livejson
+livejson>=1.8
 pyshp
 shapely
