@@ -1,6 +1,7 @@
 import os.path
 
 import shapefile
+import shapely.geometry
 
 LOCALDIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -29,3 +30,8 @@ class ShapeFileData(object):
             raise IndexError(
                 "District '{}' not found in NYS census records".format(name)
             )
+
+    def get_shape_by_name(self, district_name):
+        return shapely.geometry.Polygon(
+            self.get_district_by_name(district_name).shape.points
+        )
