@@ -16,8 +16,9 @@ setup(
     install_requires=[
         "nltk",
         "tweepy",
+        "livejson",
+        "pyshp",
         "shapely",
-        "livejson"
     ],
     test_requires=[
         "coverage"
