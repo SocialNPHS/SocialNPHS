@@ -14,10 +14,7 @@ def get_graduating_class():
     """Get the year of the next graduating class. Assumes once July starts,
     everyone moves up a grade, since people graduate in late June."""
     now = datetime.date.today()
-    if now.month < 7:  # It's before summer (july)
-        return now.year
-    else:
-        return now.year + 1
+    return now.year if now.month < 7 else now.year + 1
 
 # -------- MAIN CLASSES -------- #
 
