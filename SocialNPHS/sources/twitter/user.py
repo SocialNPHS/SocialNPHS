@@ -48,7 +48,7 @@ class User(object):
 
 class NPUser(User):
     def __init__(self, screen_name):
-        super(NPUser, self).__init__(screen_name)
+        super().__init__(screen_name)
         if self.screen_name not in students:
             # TODO: add the user to the database in this case
             raise ValueError("{} doesn't appear to be in the database".format(
