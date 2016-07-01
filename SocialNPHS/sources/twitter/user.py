@@ -3,11 +3,9 @@ Base class for a twitter user
 """
 
 import datetime
-import os
-
-import livejson
 
 from SocialNPHS.sources.twitter.auth import api
+from SocialNPHS.data.twitter_users import students
 
 # -------- HELPER METHODS -------- #
 
@@ -20,12 +18,6 @@ def get_graduating_class():
         return now.year
     else:
         return now.year + 1
-
-# -------- GLOBALS -------- #
-
-localdir = os.path.dirname(os.path.abspath(__file__))
-dbpath = os.path.join(localdir, "users.json")
-students = livejson.Database(dbpath)
 
 # -------- MAIN CLASSES -------- #
 
