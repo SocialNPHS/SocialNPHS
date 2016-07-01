@@ -31,6 +31,8 @@ class TestUser(unittest.TestCase):
         chris = user.NPUser("bravoc9")
         self.assertEqual(chris.fullname, "Chris Bravo")
         self.assertEqual(chris.sex, "M")
+        with self.assertRaises(AttributeError):
+            chris.this_is_not_a_valid_attribute
 
     def test_has_graduated(self):
         """ Test has_graduated by manipulating values """
@@ -41,10 +43,9 @@ class TestUser(unittest.TestCase):
         self.assertTrue(moshe.has_graduated)
         moshe.user_info["grade"] = "2017"  # Reset
 
-    def test_exceptions(self):
+    def test_misc(self):
         with self.assertRaises(ValueError):
             user.NPUser("this_is_too_long_to_be_a_twitter_handle")
-
 
 class testTweets(unittest.TestCase):
     """ Test SocialNPHS.sources.twitter.tweets """
