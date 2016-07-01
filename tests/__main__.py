@@ -34,5 +34,5 @@ if "--report-coverage" in sys.argv:
     if inside_circle:
         out = os.path.join(os.environ["CIRCLE_ARTIFACTS"], "coverage-report")
         cov.html_report(directory=out)
-    else:
-        cov.report(show_missing=True)
+    print("\n")
+    cov.report(show_missing=True)
