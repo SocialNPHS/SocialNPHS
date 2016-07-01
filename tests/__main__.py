@@ -3,8 +3,9 @@ Run all tests
 """
 import glob
 import unittest
-
 from os import path
+
+import coverage
 
 localdir = path.dirname(path.abspath(__file__))
 
@@ -17,4 +18,12 @@ testNames = [path.splitext(path.split(t)[1])[0] for t in tests]
 
 suites = [unittest.defaultTestLoader.loadTestsFromName(t) for t in testNames]
 fullsuite = unittest.TestSuite(suites)
+
+cov = coverage.Coverage(source=["SocialNPHS"])
+cov.start()
+
 unittest.TextTestRunner().run(fullsuite)
+
+print("\n")
+cov.stop()
+cov.report()
