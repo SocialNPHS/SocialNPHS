@@ -14,7 +14,7 @@ setup(
     author_email="luke@deentaylor.com",
     url="http://luke.deentaylor.com/",
     install_requires=[
-        "livejson",
+        "nltk",
         "tweepy",
         "shapely",
         "livejson"
