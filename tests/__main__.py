@@ -28,4 +28,4 @@ unittest.TextTestRunner().run(fullsuite)
 cov.stop()
 if "--report-coverage" in sys.argv:
     print("\n")
-    cov.report()
+    cov.report(show_missing=True)
