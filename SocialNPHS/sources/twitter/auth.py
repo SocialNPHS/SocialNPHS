@@ -7,17 +7,6 @@ import os
 
 import tweepy
 
-localdir = os.path.dirname(os.path.abspath(__file__))
-
-# On personal computers, .gitignored JSON files can be more convenient than
-# environment variables. If the "token.json" file is present, we copy its
-# values as environment variables
-tokenpath = os.path.join(localdir, "token.json")
-if os.path.exists(tokenpath):
-    with open(tokenpath, "r") as f:
-        data = json.load(f)
-        os.environ.update(data)
-
 
 def _get_secret_stuffs():
     """ Retrieves Twitter API tokens & keys from stored secrets """

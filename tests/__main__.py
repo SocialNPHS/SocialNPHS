@@ -2,6 +2,7 @@
 Run all tests
 """
 import glob
+import json
 import os
 import sys
 import unittest
@@ -9,6 +10,16 @@ import unittest
 import coverage
 
 localdir = os.path.dirname(os.path.abspath(__file__))
+
+# On personal computers, .gitignored JSON files can be more convenient than
+# environment variables. If the "token.json" file is present, we copy its
+# values as environment variables
+tokenpath = os.path.join(localdir, "../token.json")
+if os.path.exists(tokenpath):
+    with open(tokenpath, "r") as f:
+        data = json.load(f)
+        os.environ.update(data)
+
 
 # Absolute path to each testing script
 tests = glob.glob(os.path.join(localdir, "*.py"))
