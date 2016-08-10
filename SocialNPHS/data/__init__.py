@@ -1,5 +1,10 @@
-""" Static data used by SocialNPHS. By "static" I don't mean it doesn't change,
-but it comes from a file instead of (directly) from the internet """
+""" Static data used by SocialNPHS.
+
+By "static" I don't mean it doesn't change, but that it comes from a file
+instead of (directly) from the internet.
+
+This includes the interface to the sqlite database.
+"""
 
 from SocialNPHS.data import district_bounds
 
