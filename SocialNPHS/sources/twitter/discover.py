@@ -6,6 +6,7 @@ import random
 
 import shapely
 
+from SocialNPHS.data import district_bounds
 from SocialNPHS.sources.twitter.auth import api
 from SocialNPHS.sources.twitter import user
 
@@ -41,18 +42,16 @@ def discover_by_geolocation(origin, num_users=20):
                 elif t.place.contained_within.name == 'New Paltz':
                     np_users.append(u.screen_name)
                 # ...or the hard way:
-                # check if the tweet's location's 4 coords are contained in
-                # new paltz's general area
+                # check if the tweet's location is in the school district
                 else:
-                    # general new paltz area - final / constant
-                    NP_AREA = shapely.geometry.Polygon([(-74.295, 41.655),
-                                                        (-74.295, 41.811),
-                                                        (-72.037, 41.811),
-                                                        (-72.037, 41.655)])
+                    districts = district_bounds.ShapeFileData()
+                    npcsd = districts.get_shape_by_name(
+                        'New Paltz Central School District'
+                    )
                     area = shapely.geometry.Polygon(
                         t.place.bounding_box.coordinates
                     )
-                    if area.intersects(NP_AREA):
+                    if area.intersects(npcsd):
                         np_users.append(u.screen_name)
     return np_users
 
