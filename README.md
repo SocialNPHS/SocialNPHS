@@ -1,6 +1,4 @@
-# SocialNPHS
-[![CircleCI](https://circleci.com/gh/SocialNPHS/SocialNPHS.svg?style=shield)](https://circleci.com/gh/controversial/SocialNPHS)
-[![Coverage Status](https://coveralls.io/repos/github/SocialNPHS/SocialNPHS/badge.svg?branch=master)](https://coveralls.io/github/SocialNPHS/SocialNPHS?branch=master)
+# SocialNPHS [![CircleCI](https://circleci.com/gh/SocialNPHS/SocialNPHS.svg?style=shield)](https://circleci.com/gh/controversial/SocialNPHS) [![Coverage Status](https://coveralls.io/repos/github/SocialNPHS/SocialNPHS/badge.svg?branch=master)](https://coveralls.io/github/SocialNPHS/SocialNPHS?branch=master)
 
 Analyzing New Paltz High School's tweets
 
