@@ -10,8 +10,6 @@ dependencies:
     - pip3 install -r requirements-dev.txt
     # Install NLTK corpora
     - python3 -m nltk.downloader vader_lexicon averaged_perceptron_tagger punkt
-    # Install coveralls reporter
-    - pip3 install coveralls
 test:
   override:
     - python3 tests # Nosetests tries to be smart and does not succeed
