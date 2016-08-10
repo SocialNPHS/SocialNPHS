@@ -56,6 +56,7 @@ if inside_circle:
     cov.stop()
     out = os.path.join(os.environ["CIRCLE_ARTIFACTS"], "coverage-report")
     cov.html_report(directory=out)
+    cov.save()
 else:
     # We're running locally. Use a simpler test runner, and only report
     # coverage if it's explicitly requested via the --report-coverage line.
@@ -65,3 +66,4 @@ else:
     if "--report-coverage" in sys.argv:
         print("\n")
         cov.report(show_missing=True)
+        cov.save()
