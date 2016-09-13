@@ -8,7 +8,7 @@ SocialNPHS is a project to analyze New Paltz High School through data from socia
 ### How does it work?
 SocialNPHS reads tweets from a twitter list which includes a majority of New Paltz High School students. Then, SocialNPHS gathers a few forms of data.
 
-SocialNPHS reads and records simple metrics like tweet frequency over time. SocialNPHS analyzes tweets one-by-one using a variety of natural language processing techniques. This allows for collection of data like the typical sentiment of a user's tweets. SocialNPHS looks up tweet authors in a small database to gain additional context, such as to which grade a user belongs. This can be used to view data more specifically and gain further insights.
+SocialNPHS reads and records simple metrics like tweet frequency over time. SocialNPHS also analyzes tweets one-by-one using a variety of natural language processing techniques. This allows for collection of data like the typical sentiment of a user's tweets. Finally, SocialNPHS looks up tweet authors in a small database to gain additional context, such as to which grade a user belongs. This can be used to view data more specifically and gain further insights.
 
 ## Quickstart
 **Installing**:
