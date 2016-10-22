@@ -52,7 +52,7 @@ class TestUser(unittest.TestCase):
             user.NPUser("this_is_too_long_to_be_a_twitter_handle")
 
 
-class testTweets(unittest.TestCase):
+class TestTweets(unittest.TestCase):
     """ Test SocialNPHS.sources.twitter.tweets """
     def test_list(self):
         t = tweets.get_nphs_tweets()
@@ -60,7 +60,7 @@ class testTweets(unittest.TestCase):
         self.assertIsInstance(t[0], str)
 
 
-class testDiscovery(unittest.TestCase):
+class TestDiscovery(unittest.TestCase):
     """ Test SocialNPHS.sources.twitter.discover """
     # Setting up mock Twitter users to do these tests consistently
     chris = MagicMock(
@@ -121,7 +121,7 @@ class testDiscovery(unittest.TestCase):
                 name='New Paltz')))],
             'm': [MagicMock(place=MagicMock(bounding_box=MagicMock(
                 coordinates=[
-                    (-74.005, 41.695), (-74.005, 41.711),
+                    (-74.205, 41.695), (-74.205, 41.711),
                     (-73.037, 41.711), (-73.037, 41.695)
                 ])))],
             'r': [MagicMock(place=None)]

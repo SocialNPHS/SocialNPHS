@@ -36,11 +36,12 @@ def discover_by_geolocation(origin, num_users=20):
         for t in api.user_timeline(u.id):
             if t.place is not None:
                 # now we can do this the easy way...
-                if t.place.attributes.postal_code is not None:
-                    if t.place.attributes.postal_code == '12561':
+                if 'postal_code' in t.place.attributes:
+                    if t.place.attributes['postal_code'] == '12561':
                         np_users.append(u.screen_name)
-                elif t.place.contained_within.name == 'New Paltz':
-                    np_users.append(u.screen_name)
+                elif len(t.place.contained_within) > 0:
+                    if t.place.contained_within[0]['name'] == 'New Paltz':
+                        np_users.append(u.screen_name)
                 # ...or the hard way:
                 # check if the tweet's location is in the school district
                 else:
@@ -49,7 +50,7 @@ def discover_by_geolocation(origin, num_users=20):
                         'New Paltz Central School District'
                     )
                     area = shapely.geometry.Polygon(
-                        t.place.bounding_box.coordinates
+                        [tuple(x) for x in t.place.bounding_box.coordinates[0]]
                     )
                     if area.intersects(npcsd):
                         np_users.append(u.screen_name)
