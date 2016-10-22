@@ -57,6 +57,8 @@ class TestUser(unittest.TestCase):
 class TestTweets(unittest.TestCase):
     """ Test SocialNPHS.sources.twitter.tweets """
     def test_list(self):
+        # NOTE: this will error if nobody on the list has tweeted in the past
+        # 24 hours. Should be fixed perhaps.
         t = tweets.get_nphs_tweets()
         self.assertIsInstance(t, list)
         self.assertIsInstance(t[0], tweepy.Status)
@@ -127,25 +129,52 @@ class TestDiscovery(unittest.TestCase):
     def test_geolocation(self):
         with patch('SocialNPHS.sources.twitter.auth.api') as mock_api:
             mock_tweets = {
-                'c': [MagicMock(place=MagicMock(attributes={
-                    'postal_code': '12561'}))],
-                'l': [MagicMock(place=MagicMock(contained_within=[{
-                    'name': 'New Paltz'}]))],
-                'm': [MagicMock(place=MagicMock(contained_within=[{
-                    'bounding_box': MagicMock(
-                        coordinates=[[
-                            (-74.205, 41.695), (-74.205, 41.711),
-                            (-73.037, 41.711), (-73.037, 41.695)
-                        ]])}]))],
-                'b': [MagicMock(place=MagicMock(contained_within=[{
-                    'name': 'New Paltz'}]))],
-                'r': [MagicMock(place=None)]
+                'c': [MagicMock(
+                    place=MagicMock(
+                        attributes={
+                            'postal_code': '12561'
+                        }
+                    )
+                )],
+
+                'l': [MagicMock(
+                    place=MagicMock(
+                        contained_within=[{'name': 'New Paltz'}]
+                    )
+                )],
+
+                'm': [MagicMock(
+                    place=MagicMock(
+                        contained_within=[{
+                            'bounding_box': MagicMock(
+                                coordinates=[[
+                                    (-74.205, 41.695), (-74.205, 41.711),
+                                    (-73.037, 41.711), (-73.037, 41.695)
+                                ]]
+                            )
+                        }]
+                    )
+                )],
+
+                'b': [
+                    MagicMock(
+                        place=MagicMock(
+                            contained_within=[{'name': 'New Paltz'}]
+                        )
+                    )
+                ],
+
+                'r': [
+                    MagicMock(place=None)
+                ]
             }
 
             def return_method(id):
                 return mock_tweets[id]
             mock_api.user_timeline = MagicMock(side_effect=return_method)
-            users = discover.discover_by_geolocation(self.luke, 7, _api=mock_api)
+            users = discover.discover_by_geolocation(
+                self.luke, 7, _api=mock_api
+            )
             self.assertTrue('G4_Y5_3X' in users)
             self.assertTrue('iceberger' in users)
             self.assertFalse('TheRock' in users)
