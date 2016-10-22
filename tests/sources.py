@@ -7,6 +7,8 @@ import unittest
 from unittest.mock import MagicMock
 from unittest.mock import patch
 
+import tweepy
+
 # Magically manipulate sys.path
 from testassets import pathmagic
 
@@ -57,7 +59,7 @@ class TestTweets(unittest.TestCase):
     def test_list(self):
         t = tweets.get_nphs_tweets()
         self.assertIsInstance(t, list)
-        self.assertIsInstance(t[0], str)
+        self.assertIsInstance(t[0], tweepy.Status)
 
 
 class TestDiscovery(unittest.TestCase):
