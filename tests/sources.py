@@ -73,13 +73,19 @@ class TestDiscovery(unittest.TestCase):
         id='l',
         location='New Paltz',
         screen_name='1Defenestrator',
-        followers_count=3
+        followers_count=4
     )
     moshe = MagicMock(
         id='m',
         location='New Paltz NY',
         screen_name='G4_Y5_3X',
         followers_count=2
+    )
+    michael = MagicMock(
+        id='b',
+        location='New Paltz',
+        screen_name='iceberger',
+        followers_count=0
     )
     rock = MagicMock(
         id='r',
@@ -91,11 +97,14 @@ class TestDiscovery(unittest.TestCase):
     chris.followers = [luke, moshe]
     chris.following = [luke, rock]
 
-    luke.followers = [chris, moshe, rock]
+    luke.followers = [chris, moshe, rock, michael]
     luke.following = [chris, moshe, rock]
 
     moshe.followers = [luke, rock]
     moshe.following = [chris, luke, rock]
+
+    michael.followers = []
+    michael.following = [luke]
 
     rock.followers = [chris, luke, moshe]
     rock.following = [luke, moshe]
@@ -116,15 +125,18 @@ class TestDiscovery(unittest.TestCase):
     def test_geolocation(self):
         with patch('SocialNPHS.sources.twitter.auth.api') as mock_api:
             mock_tweets = {
-                'c': [MagicMock(place=MagicMock(attributes={'postal_code': '12561'}))],
-                'l': [MagicMock(place=MagicMock(contained_within=[
-                    {'name': 'New Paltz'}]))],
+                'c': [MagicMock(place=MagicMock(attributes={
+                    'postal_code': '12561'}))],
+                'l': [MagicMock(place=MagicMock(contained_within=[{
+                    'name': 'New Paltz'}]))],
                 'm': [MagicMock(place=MagicMock(contained_within=[{
                     'bounding_box': MagicMock(
                         coordinates=[[
                             (-74.205, 41.695), (-74.205, 41.711),
                             (-73.037, 41.711), (-73.037, 41.695)
                         ]])}]))],
+                'b': [MagicMock(place=MagicMock(attributes={
+                    'postal_code': '12561'}))],
                 'r': [MagicMock(place=None)]
             }
 
@@ -133,6 +145,7 @@ class TestDiscovery(unittest.TestCase):
             mock_api.user_timeline = MagicMock(side_effect=return_method)
             users = discover.discover_by_geolocation(self.luke, 6, _api=mock_api)
             self.assertTrue('G4_Y5_3X' in users)
+            self.assertTrue('iceberger' in users)
             self.assertFalse('TheRock' in users)
 
 
