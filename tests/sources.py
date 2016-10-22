@@ -135,8 +135,8 @@ class TestDiscovery(unittest.TestCase):
                             (-74.205, 41.695), (-74.205, 41.711),
                             (-73.037, 41.711), (-73.037, 41.695)
                         ]])}]))],
-                'b': [MagicMock(place=MagicMock(attributes={
-                    'postal_code': '12561'}))],
+                'b': [MagicMock(place=MagicMock(contained_within=[{
+                    'name': 'New Paltz'}]))],
                 'r': [MagicMock(place=None)]
             }
 
