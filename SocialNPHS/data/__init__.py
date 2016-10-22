@@ -3,7 +3,11 @@
 By "static" I don't mean it doesn't change, but that it comes from a file
 instead of (directly) from the internet.
 
-This includes the interface to the sqlite database.
+This includes:
+- District bounds data
+- The database of twitter users
+- The SQLite database
+and a python interface to each of these
 """
 
 from SocialNPHS.data import district_bounds
