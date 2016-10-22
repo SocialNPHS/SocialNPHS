@@ -18,6 +18,7 @@ class testTweetLanguage(unittest.TestCase):
                          "@G4_Y5_3X is cooler.")
         self.sentence2 = ("I heard that @TheRock is really @1Defenestrator "
                           "in disguise. I'd believe it.")
+        self.sentence3 = ("Mr. Haas is cooler than your grandmother.")
 
     def test_tweet_tagging(self):
         # Test that tagging works in its most basic form
@@ -28,6 +29,9 @@ class testTweetLanguage(unittest.TestCase):
         tags = tweet.get_tweet_tags(self.sentence)
         self.assertEqual(tags[0][0], "Luke Taylor")
         self.assertEqual(tags[0][1], "NNP")
+        # Test that teacher names are appropriately tagged
+        tags = tweet.get_tweet_tags(self.sentence3)
+        self.assertEqual(tags[0][0], "Mr. Haas")
 
     def test_tweet_sentiment(self):
         # Test that basic sentiment analysis works

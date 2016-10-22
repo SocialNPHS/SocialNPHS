@@ -29,7 +29,24 @@ def get_tweet_tags(tweet):
                 # this is the full name in many cases, it is often not reliable
                 usr = api.get_user(handle)
                 tokens[n] = usr.name
-    return nltk.pos_tag(tokens)
+    tagged = nltk.pos_tag(tokens)
+    # In nltk, if a teacher's name is written with a period after an
+    # abbreviated prefix, it is awkwardly broken up into 3 tags
+    for n, tag in enumerate(tagged):
+        try:
+            # If there is the weird period after the prefix,
+            if tag[1] == '.':
+                # and it is in fact splitting up a person's name,
+                if tagged[n - 1][1] == 'NNP' and tagged[n + 1][1] == 'NNP':
+                    # combine it into the actual name,
+                    tagged[n - 1] = ('{}. {}'.format(tagged[n - 1][0],
+                                                     tagged[n + 1][0]), 'NNP')
+                    # and then remove the extra tags.
+                    del tagged[n + 1]
+                    del tagged[n]
+        except Exception:
+            continue
+    return tagged
 
 
 def tweet_connotation(tweet):
