@@ -37,12 +37,13 @@ def get_tweet_tags(tweet):
         if tag[1] == '.':
             # and it is in fact splitting up a person's name,
             if tagged[n - 1][1] == 'NNP' and tagged[n + 1][1] == 'NNP':
-                # combine it into the actual name,
-                tagged[n - 1] = ('{}. {}'.format(tagged[n - 1][0],
-                                                 tagged[n + 1][0]), 'NNP')
-                # and then remove the extra tags.
-                del tagged[n + 1]
-                del tagged[n]
+                if tagged[n - 1][0] in ['Mr', 'Ms', 'Mrs', 'Mx']:
+                    # combine it into the actual name,
+                    tagged[n - 1] = ('{}. {}'.format(tagged[n - 1][0],
+                                                     tagged[n + 1][0]), 'NNP')
+                    # and then remove the extra tags.
+                    del tagged[n + 1]
+                    del tagged[n]
     return tagged
 
 

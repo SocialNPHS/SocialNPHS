@@ -32,6 +32,7 @@ class testTweetLanguage(unittest.TestCase):
         # Test that teacher names are appropriately tagged
         tags = tweet.get_tweet_tags(self.sentence3)
         self.assertEqual(tags[0][0], "Mr. Haas")
+        self.assertNotEqual(tags[1][0], ".")
 
     def test_tweet_sentiment(self):
         # Test that basic sentiment analysis works
