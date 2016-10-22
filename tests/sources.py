@@ -143,7 +143,7 @@ class TestDiscovery(unittest.TestCase):
             def return_method(id):
                 return mock_tweets[id]
             mock_api.user_timeline = MagicMock(side_effect=return_method)
-            users = discover.discover_by_geolocation(self.luke, 6, _api=mock_api)
+            users = discover.discover_by_geolocation(self.luke, 7, _api=mock_api)
             self.assertTrue('G4_Y5_3X' in users)
             self.assertTrue('iceberger' in users)
             self.assertFalse('TheRock' in users)
