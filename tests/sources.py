@@ -114,25 +114,26 @@ class TestDiscovery(unittest.TestCase):
         self.assertFalse('TheRock' in users)
 
     def test_geolocation(self):
-        mock_tweets = {
-            'c': [MagicMock(place=MagicMock(attributes=MagicMock(
-                postal_code=12561)))],
-            'l': [MagicMock(place=MagicMock(contained_within=MagicMock(
-                name='New Paltz')))],
-            'm': [MagicMock(place=MagicMock(bounding_box=MagicMock(
-                coordinates=[
-                    (-74.205, 41.695), (-74.205, 41.711),
-                    (-73.037, 41.711), (-73.037, 41.695)
-                ])))],
-            'r': [MagicMock(place=None)]
-        }
         with patch('SocialNPHS.sources.twitter.auth.api') as mock_api:
+            mock_tweets = {
+                'c': [MagicMock(place=MagicMock(attributes={'postal_code': '12561'}))],
+                'l': [MagicMock(place=MagicMock(contained_within=[
+                    {'name': 'New Paltz'}]))],
+                'm': [MagicMock(place=MagicMock(contained_within=[{
+                    'bounding_box': MagicMock(
+                        coordinates=[[
+                            (-74.205, 41.695), (-74.205, 41.711),
+                            (-73.037, 41.711), (-73.037, 41.695)
+                        ]])}]))],
+                'r': [MagicMock(place=None)]
+            }
+
             def return_method(id):
                 return mock_tweets[id]
-            mock_api.user_timeline.return_value = return_method
-            users = discover.discover_by_geolocation(self.luke, 6)
+            mock_api.user_timeline = MagicMock(side_effect=return_method)
+            users = discover.discover_by_geolocation(self.luke, 6, _api=mock_api)
             self.assertTrue('G4_Y5_3X' in users)
-            self.assetFalse('TheRock' in users)
+            self.assertFalse('TheRock' in users)
 
 
 # INSTAGRAM TESTS

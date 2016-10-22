@@ -25,7 +25,7 @@ def discover_by_location(origin, num_users=20):
     return np_users
 
 
-def discover_by_geolocation(origin, num_users=20):
+def discover_by_geolocation(origin, num_users=20, _api=api):
     """
     Discovers users based on the location posted with some of their tweets.
     """
@@ -33,27 +33,28 @@ def discover_by_geolocation(origin, num_users=20):
     np_users = []
     for u in users:
         # go through this user's tweets, searching for location info
-        for t in api.user_timeline(u.id):
+        for t in _api.user_timeline(u.id):
             if t.place is not None:
                 # now we can do this the easy way...
                 if 'postal_code' in t.place.attributes:
                     if t.place.attributes['postal_code'] == '12561':
                         np_users.append(u.screen_name)
                 elif len(t.place.contained_within) > 0:
-                    if t.place.contained_within[0]['name'] == 'New Paltz':
-                        np_users.append(u.screen_name)
-                # ...or the hard way:
-                # check if the tweet's location is in the school district
-                else:
-                    districts = district_bounds.ShapeFileData()
-                    npcsd = districts.get_shape_by_name(
-                        'New Paltz Central School District'
-                    )
-                    area = shapely.geometry.Polygon(
-                        [tuple(x) for x in t.place.bounding_box.coordinates[0]]
-                    )
-                    if area.intersects(npcsd):
-                        np_users.append(u.screen_name)
+                    if 'name' in t.place.contained_within[0]:
+                        if t.place.contained_within[0]['name'] == 'New Paltz':
+                            np_users.append(u.screen_name)
+                    # ...or the hard way:
+                    # check if the tweet's location is in the school district
+                    else:
+                        districts = district_bounds.ShapeFileData()
+                        npcsd = districts.get_shape_by_name(
+                            'New Paltz Central School District'
+                        )
+                        area = shapely.geometry.Polygon(
+                            t.place.contained_within[0]['bounding_box'].coordinates[0]
+                        )
+                        if area.intersects(npcsd):
+                            np_users.append(u.screen_name)
     return np_users
 
 
