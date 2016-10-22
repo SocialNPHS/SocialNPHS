@@ -16,6 +16,8 @@ class testTweetLanguage(unittest.TestCase):
     def setUp(self):
         self.sentence = ("@1Defenestrator is really awesome! Although, "
                          "@G4_Y5_3X is cooler.")
+        self.sentence2 = ("I heard that @TheRock is really @1Defenestrator "
+                          "in disguise. I'd believe it.")
 
     def test_tweet_tagging(self):
         # Test that tagging works in its most basic form
@@ -36,4 +38,9 @@ class testTweetLanguage(unittest.TestCase):
         self.assertEqual(
             tweet.person_connotation(self.sentence, 'Luke Taylor')['neu'],
             0.461
+        )
+        self.assertEqual(
+            tweet.person_multi_connotation([self.sentence, self.sentence2],
+                                           'Luke Taylor')['pos'],
+            0.27
         )
